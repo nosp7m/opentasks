@@ -1,8 +1,8 @@
-Included from repository: https://github.com/dmfs/xmlobjects
+Included from repository: https://github.com/dmfs/jems
 
-xmlobjects - A lightweight high level XML pull parser framework
+Java gems, a collection of Java utilities.
 
-Copyright 2014 Marten Gajda <marten@dmfs.org> - http://dmfs.org
+Copyright 2017 dmfs GmbH - http://dmfs.org
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

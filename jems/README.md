@@ -1,8 +1,16 @@
-Included from repository: https://github.com/dmfs/android-xml-magic
+[![Build](https://github.com/dmfs/jems/actions/workflows/main.yml/badge.svg?label=main)](https://github.com/dmfs/jems/actions/workflows/main.yml)  
+[![codecov](https://codecov.io/gh/dmfs/jems/branch/master/graph/badge.svg)](https://codecov.io/gh/dmfs/jems)  
+[![Confidence](https://img.shields.io/badge/Tested_with-Confidence-800000?labelColor=white)](https://saynotobugs.org/confidence)
 
-Android XML Magic - Android-xml-magic brings extended XML capabilities to Android.
+# Jems
 
-Copyright 2014 Marten Gajda <marten@dmfs.org> - http://dmfs.org
+__Java gems, a collection of Java utilities.__
+
+
+## License
+
+Copyright 2023 dmfs GmbH
+
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -15,3 +23,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+

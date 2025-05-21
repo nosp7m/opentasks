@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/dmfs/opentasks.svg?branch=master)](https://travis-ci.org/dmfs/opentasks)
 # OpenTasks
 
 __An Open Source Task App for Android__

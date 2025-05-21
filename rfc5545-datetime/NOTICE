@@ -1,6 +1,6 @@
-Included from repository: https://github.com/dmfs/xmlobjects
+Included from repository: https://github.com/dmfs/rfc5545-datetime
 
-xmlobjects - A lightweight high level XML pull parser framework
+rfc5545-datetime - Java RFC 5545 datetime implementation
 
 Copyright 2014 Marten Gajda <marten@dmfs.org> - http://dmfs.org
 
