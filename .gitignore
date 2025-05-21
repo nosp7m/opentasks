@@ -19,6 +19,8 @@ local.properties
 
 # Gradle generated files
 .gradle/
+java_pid*.addons
+java_pid*.hprof
 
 # Signing files
 .signing/

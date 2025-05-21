@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+configurations {
+    pom
+}
+
+apply from: 'jacoco.gradle'
+
+dependencies {
+    testImplementation deps.junit
+    testImplementation deps.hamcrest
+    testImplementation project(':jems-testing')
+}

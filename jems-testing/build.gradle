@@ -1,0 +1,22 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+configurations {
+    pom
+}
+
+apply from: 'jacoco.gradle'
+
+dependencies {
+    api project(':jems')
+
+    // in this case, junit is not (only) a test dependency, but a build dependency
+    api deps.junit
+    api deps.mockito
+
+    implementation deps.hamcrest
+
+    testImplementation deps.hamcrest
+}

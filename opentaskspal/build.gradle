@@ -18,17 +18,17 @@ android {
 }
 
 dependencies {
-    api project(':opentasks-contract')
-    api deps.contentpal
-    api deps.datetime
-    api deps.lib_recur
     api deps.support_annotations
-    api deps.bolts_color
+    api project(':opentasks-contract')
+    api project(':contentpal')
+    api project(':rfc5545-datetime')
+    api project(':lib-recur')
+    api project(':color-bolts')
 
-    implementation deps.jems
+    implementation project(':jems-testing')
 
-    testImplementation deps.contentpal_testing
-    testImplementation deps.jems_testing
+    testImplementation project(':contentpal-testing')
+    testImplementation project(':jems-testing')
     testImplementation deps.robolectric
     testImplementation deps.junit
     testImplementation deps.mockito

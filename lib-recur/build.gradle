@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+configurations {
+    pom
+}
+
+apply from: 'jacoco.gradle'
+
+dependencies {
+    api project(':rfc5545-datetime')
+    implementation project(':jems')
+    testImplementation deps.junit
+    testImplementation project(':lib-recur-hamcrest')
+    testImplementation project(':jems-testing')
+}

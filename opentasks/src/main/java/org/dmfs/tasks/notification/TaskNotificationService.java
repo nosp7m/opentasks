@@ -112,7 +112,7 @@ public class TaskNotificationService extends JobIntentService
                                 PrefState::new,
                                 mNotificationPrefs.getAll().entrySet()));
 
-                for (Pair<Optional<TaskNotificationState>, Optional<RowState>> diff : new Diff<>(
+                for (Pair<? extends Optional<? extends TaskNotificationState>,? extends Optional<? extends RowState>> diff : new Diff<>(
                         currentNotifications,
                         new Mapped<>(snapShot -> new RowState(authority, snapShot.values()),
                                 new QueryRowSet<>(

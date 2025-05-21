@@ -28,23 +28,23 @@ android {
 
 dependencies {
     implementation project(':opentasks-contract')
-    implementation deps.datetime
-    implementation deps.lib_recur
-    implementation deps.jems
+    implementation project(':rfc5545-datetime')
+    implementation project(':lib-recur')
+    implementation project(':jems')
 
     testImplementation deps.robolectric
     testImplementation deps.junit
     testImplementation deps.mockito
-    testImplementation deps.jems_testing
+    testImplementation project(':jems-testing')
     testImplementation deps.hamcrest
 
     androidTestImplementation project(':opentaskspal')
-    androidTestImplementation deps.contenttestpal
+    androidTestImplementation project(':contentpal-testing')
+    androidTestImplementation project(':contenttestpal')
     androidTestImplementation deps.support_annotations
     androidTestImplementation deps.support_test_runner
     androidTestImplementation deps.support_test_rules
     androidTestImplementation deps.mockito
-    androidTestImplementation deps.jems_testing
+    androidTestImplementation project(':jems-testing')
     androidTestImplementation deps.hamcrest
-    androidTestImplementation deps.contentpal_testing
 }

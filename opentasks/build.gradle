@@ -70,28 +70,22 @@ dependencies {
     implementation project(':opentasks-provider')
     implementation deps.support_appcompat
     implementation deps.support_design
-    implementation(deps.xml_magic) {
-        // xmlpull is part of the runtime, so don't pull it in here
-        exclude group: 'xmlpull', module: 'xmlpull'
-    }
+    implementation project(':xmlobjects')
+    implementation project(':android-xml-magic')
     implementation deps.android_dashclock
-    implementation deps.color_picker
+    implementation project(':color-picker')
     implementation(deps.codeka_carrot) {
         exclude module: 'iterators' // TODO Remove when iterators have been removed from codeka:carrot
     }
-    implementation(deps.android_carrot) {
-        exclude module: 'carrot'
-        exclude module: 'iterators'
-        exclude module: 'jems'
-    }
-    implementation deps.jems
-    implementation deps.datetime
-    implementation deps.bolts_color
-    implementation deps.retention_magic
+    implementation project(':androidcarrot')
+    implementation project(':jems')
+    implementation project(':rfc5545-datetime')
+    implementation project(':color-bolts')
+    implementation project(':retention-magic')
 
     testImplementation deps.junit
     testImplementation deps.robolectric
-    testImplementation deps.jems_testing
+    testImplementation project(':jems-testing')
 
     androidTestImplementation deps.support_test_runner
     androidTestImplementation deps.support_test_rules

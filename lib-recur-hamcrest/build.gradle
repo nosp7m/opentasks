@@ -1,0 +1,16 @@
+plugins {
+    id 'java-library'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+apply from: 'jacoco.gradle'
+
+dependencies {
+    api project(':lib-recur')
+    api deps.hamcrest
+    api project(':jems-testing')
+    implementation project(':jems')
+    testImplementation deps.junit
+}
