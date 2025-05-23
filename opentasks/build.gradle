@@ -1,22 +1,4 @@
 apply plugin: 'com.android.application'
-if (project.hasProperty('PLAY_STORE_SERVICE_ACCOUNT_CREDENTIALS')) {
-    apply plugin: 'com.github.triplet.play'
-}
-// commit number is only relevant to the application project
-def gitCommitNo = { ref ->
-    def stdout = new ByteArrayOutputStream()
-    try {
-        exec {
-            commandLine 'git', 'rev-list', '--count', ref
-            standardOutput = stdout
-        }
-
-        return Integer.parseInt(stdout.toString().trim())
-    }
-    catch (Exception e) {
-        return 0
-    }
-}
 
 android {
     compileSdkVersion COMPILE_SDK_VERSION.toInteger()
@@ -24,24 +6,25 @@ android {
         applicationId "org.dmfs.tasks"
         minSdkVersion MIN_SDK_VERSION.toInteger()
         targetSdkVersion TARGET_SDK_VERSION.toInteger()
-        // spread version code to allow inserting versions if necessary
-        versionCode gitCommitNo('refs/remotes/origin/master') * 99 + gitCommitNo('HEAD') + Integer.parseInt(VERSION_OVERRIDE)
-        versionName version
+        versionCode VERSION_MAJOR.toInteger() * 1000000 + VERSION_MINOR.toInteger() * 1000 + VERSION_PATCH.toInteger()
+        println 'versionCode: ' + versionCode
+        versionName VERSION_MAJOR + '.' + VERSION_MINOR + '.' + VERSION_PATCH
+        println 'versionName: ' + versionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    if (project.hasProperty("DMFS_RELEASE_KEYSTORE")) {
+    if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
         signingConfigs {
             release {
-                storeFile file(DMFS_RELEASE_KEYSTORE)
-                storePassword DMFS_RELEASE_KEYSTORE_PASSWORD
-                keyAlias DMFS_RELEASE_KEY_ALIAS
-                keyPassword DMFS_RELEASE_KEY_PASSWORD
+                storeFile file(System.getenv('DMFS_RELEASE_KEYSTORE'))
+                storePassword System.getenv('DMFS_RELEASE_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('DMFS_RELEASE_KEY_ALIAS')
+                keyPassword System.getenv('DMFS_RELEASE_KEY_PASSWORD')
             }
         }
     }
     buildTypes {
         release {
-            if (project.hasProperty("DMFS_RELEASE_KEYSTORE")) {
+            if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
                 signingConfig signingConfigs.release
             }
             minifyEnabled true
@@ -95,45 +78,4 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
     implementation 'androidx.preference:preference:1.1.1'
     implementation 'com.maltaisn:recurpicker:2.1.4'
-}
-
-if (project.hasProperty('PLAY_STORE_SERVICE_ACCOUNT_CREDENTIALS')) {
-    play {
-        serviceAccountCredentials = file(PLAY_STORE_SERVICE_ACCOUNT_CREDENTIALS)
-        // the track is determined automatically by the version number format
-        switch (version) {
-            case ~/^(\d+)(\.\d+)*(-\d+-[\w\d]+)?-dirty$/:
-                // work in progress goes to the internal track
-                track = "internal"
-                break
-            case ~/^(\d+)(\.\d+)*-\d+-[\w\d]+$/:
-                // untagged commits go to alpha
-                track = "alpha"
-                break
-            case ~/^(\d+)(\.\d+)*$/:
-                // tagged commits to go beta, from where they get promoted to releases
-                track = "beta"
-                break
-            default:
-                throw new IllegalArgumentException("Unrecognized version format")
-        }
-    }
-}
-
-task postVersion {
-    doLast {
-        if (project.hasProperty('OPENTASKS_API_KEY')) {
-            // publish version number on api.opentasks.app
-            ((HttpURLConnection) new URL('https://opentasks-app.appspot.com/v1/app/latest_version/').openConnection()).with({
-                requestMethod = 'POST'
-                doOutput = true
-                setRequestProperty('Content-Type', 'application/x-www-form-urlencoded')
-                setRequestProperty('Authorization', "Token token=\"${OPENTASKS_API_KEY}\"")
-                outputStream.withPrintWriter({ printWriter ->
-                    printWriter.write("version_code=${project.android.defaultConfig.versionCode}&version_name=${project.android.defaultConfig.versionName}")
-                })
-                content
-            })
-        }
-    }
 }
