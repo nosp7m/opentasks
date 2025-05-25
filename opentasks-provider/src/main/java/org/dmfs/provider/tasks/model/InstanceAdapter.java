@@ -23,9 +23,9 @@ import org.dmfs.provider.tasks.model.adapters.DateTimeFieldAdapter;
 import org.dmfs.provider.tasks.model.adapters.IntegerFieldAdapter;
 import org.dmfs.provider.tasks.model.adapters.LongFieldAdapter;
 import org.dmfs.provider.tasks.model.adapters.StringFieldAdapter;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.Instances;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.Instances;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 import java.util.Collection;
 import java.util.HashSet;

@@ -21,7 +21,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.dmfs.provider.tasks.TaskDatabaseHelper;
 import org.dmfs.provider.tasks.model.adapters.FieldAdapter;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

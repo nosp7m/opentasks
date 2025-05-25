@@ -24,7 +24,7 @@ import org.dmfs.provider.tasks.TaskDatabaseHelper;
 import org.dmfs.provider.tasks.model.CursorContentValuesTaskAdapter;
 import org.dmfs.provider.tasks.model.TaskAdapter;
 import org.dmfs.provider.tasks.processors.EntityProcessor;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

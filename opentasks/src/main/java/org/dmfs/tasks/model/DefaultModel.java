@@ -20,7 +20,7 @@ import android.content.Context;
 import android.text.util.Linkify;
 
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.model.layout.LayoutDescriptor;
 
 

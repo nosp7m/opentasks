@@ -43,8 +43,8 @@ import org.dmfs.android.colorpicker.palettes.RainbowColorFactory;
 import org.dmfs.android.colorpicker.palettes.RandomPalette;
 import org.dmfs.android.retentionmagic.annotations.Retain;
 import org.dmfs.tasks.InputTextDialogFragment.InputTextListener;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.TaskLists;
 import org.dmfs.tasks.utils.BaseActivity;
 
 

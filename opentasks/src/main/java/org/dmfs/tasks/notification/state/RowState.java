@@ -20,9 +20,9 @@ import android.content.ContentUris;
 import android.net.Uri;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.opentaskspal.readdata.Id;
-import org.dmfs.opentaskspal.readdata.TaskVersion;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.pal.readdata.Id;
+import app.tasksandlists.pal.readdata.TaskVersion;
+import app.tasksandlists.contract.TaskContract;
 
 import androidx.annotation.NonNull;
 

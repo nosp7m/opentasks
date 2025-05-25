@@ -16,7 +16,7 @@
 
 package org.dmfs.tasks.actions;
 
-import org.dmfs.opentaskspal.tasks.PinnedData;
+import app.tasksandlists.pal.tasks.PinnedData;
 
 
 /**

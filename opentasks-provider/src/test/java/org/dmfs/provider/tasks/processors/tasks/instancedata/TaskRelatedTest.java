@@ -19,7 +19,7 @@ package org.dmfs.provider.tasks.processors.tasks.instancedata;
 import android.content.ContentValues;
 
 import org.dmfs.provider.tasks.utils.ContentValuesWithLong;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;

@@ -25,10 +25,10 @@ import org.dmfs.jems.iterable.decorators.Chunked;
 import org.dmfs.ngrams.NGramGenerator;
 import org.dmfs.provider.tasks.TaskDatabaseHelper.Tables;
 import org.dmfs.provider.tasks.model.TaskAdapter;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.Properties;
-import org.dmfs.tasks.contract.TaskContract.TaskColumns;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.Properties;
+import app.tasksandlists.contract.TaskContract.TaskColumns;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 import java.util.ArrayList;
 import java.util.Collections;

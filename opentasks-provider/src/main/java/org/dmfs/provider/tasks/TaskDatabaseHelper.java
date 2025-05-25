@@ -31,12 +31,12 @@ import org.dmfs.provider.tasks.processors.EntityProcessor;
 import org.dmfs.provider.tasks.processors.NoOpProcessor;
 import org.dmfs.provider.tasks.processors.tasks.Instantiating;
 import org.dmfs.provider.tasks.utils.TableColumns;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.Properties;
-import org.dmfs.tasks.contract.TaskContract.Property.Alarm;
-import org.dmfs.tasks.contract.TaskContract.Property.Category;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.Properties;
+import app.tasksandlists.contract.TaskContract.Property.Alarm;
+import app.tasksandlists.contract.TaskContract.Property.Category;
+import app.tasksandlists.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 import java.util.Locale;
 

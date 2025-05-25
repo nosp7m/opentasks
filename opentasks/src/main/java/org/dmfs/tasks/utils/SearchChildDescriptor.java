@@ -21,7 +21,7 @@ import android.database.Cursor;
 
 import androidx.loader.content.CursorLoader;
 
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.groupings.filters.AbstractFilter;
 
 

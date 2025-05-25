@@ -16,7 +16,7 @@
 
 package org.dmfs.tasks.model.constraints;
 
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.model.ContentSet;
 import org.dmfs.tasks.model.DescriptionItem;
 import org.dmfs.tasks.model.adapters.IntegerFieldAdapter;

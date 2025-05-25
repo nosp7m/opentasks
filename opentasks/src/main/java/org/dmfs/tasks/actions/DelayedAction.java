@@ -28,7 +28,7 @@ import android.os.RemoteException;
 import androidx.core.app.AlarmManagerCompat;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.notification.ActionReceiver;
 
 

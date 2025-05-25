@@ -29,7 +29,7 @@ import android.widget.RemoteViews;
 import org.dmfs.android.bolts.color.colors.AttributeColor;
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.notification.ActionReceiver;
 import org.dmfs.tasks.notification.ActionService;
 import org.dmfs.tasks.notification.signals.NoSignal;

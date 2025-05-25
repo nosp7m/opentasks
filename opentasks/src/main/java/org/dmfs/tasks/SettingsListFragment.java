@@ -44,7 +44,7 @@ import android.widget.Toast;
 import org.dmfs.android.bolts.color.colors.AttributeColor;
 import org.dmfs.android.widgets.ColoredShapeCheckBox;
 import org.dmfs.provider.tasks.AuthorityUtil;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.model.Model;
 import org.dmfs.tasks.model.Sources;
 

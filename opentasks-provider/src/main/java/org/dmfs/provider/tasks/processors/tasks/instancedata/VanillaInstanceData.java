@@ -19,7 +19,7 @@ package org.dmfs.provider.tasks.processors.tasks.instancedata;
 import android.content.ContentValues;
 
 import org.dmfs.jems.single.Single;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

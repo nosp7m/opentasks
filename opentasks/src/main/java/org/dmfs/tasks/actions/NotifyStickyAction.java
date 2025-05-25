@@ -19,7 +19,7 @@ package org.dmfs.tasks.actions;
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.jems.function.Function;
 import org.dmfs.tasks.actions.conditions.NotificationEnabled;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

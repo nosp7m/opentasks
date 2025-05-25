@@ -23,7 +23,7 @@ import android.net.Uri;
 import androidx.core.app.NotificationManagerCompat;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

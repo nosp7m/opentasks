@@ -24,7 +24,7 @@ import android.os.RemoteException;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.iterables.elementary.Seq;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

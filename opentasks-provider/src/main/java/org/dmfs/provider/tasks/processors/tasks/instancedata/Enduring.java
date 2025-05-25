@@ -22,7 +22,7 @@ import org.dmfs.jems.optional.composite.Zipped;
 import org.dmfs.jems.optional.elementary.NullSafe;
 import org.dmfs.jems.single.Single;
 import org.dmfs.jems.single.combined.Backed;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

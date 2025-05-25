@@ -26,7 +26,7 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract.Instances;
+import app.tasksandlists.contract.TaskContract.Instances;
 import org.dmfs.tasks.groupings.cursorloaders.TimeRangeCursorFactory;
 import org.dmfs.tasks.groupings.cursorloaders.TimeRangeCursorLoaderFactory;
 import org.dmfs.tasks.groupings.cursorloaders.TimeRangeShortCursorFactory;

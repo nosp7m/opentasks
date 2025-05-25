@@ -29,7 +29,7 @@ import org.dmfs.android.contentpal.references.RowUriReference;
 import org.dmfs.android.contentpal.transactions.BaseTransaction;
 import org.dmfs.iterables.elementary.Seq;
 import org.dmfs.jems.function.Function;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

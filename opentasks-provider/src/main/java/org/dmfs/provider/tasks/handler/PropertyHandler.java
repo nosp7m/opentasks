@@ -22,7 +22,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.dmfs.provider.tasks.FTSDatabaseHelper;
 import org.dmfs.provider.tasks.TaskDatabaseHelper.Tables;
-import org.dmfs.tasks.contract.TaskContract.Properties;
+import app.tasksandlists.contract.TaskContract.Properties;
 
 
 /**

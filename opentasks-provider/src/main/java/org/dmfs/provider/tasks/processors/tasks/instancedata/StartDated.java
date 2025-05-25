@@ -22,7 +22,7 @@ import org.dmfs.jems.optional.Optional;
 import org.dmfs.jems.single.Single;
 import org.dmfs.jems.single.decorators.DelegatingSingle;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

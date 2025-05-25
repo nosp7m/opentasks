@@ -26,7 +26,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.model.TaskFieldAdapters;
 
 import androidx.cursoradapter.widget.CursorAdapter;

@@ -40,9 +40,9 @@ import org.dmfs.android.contentpal.rowsets.QueryRowSet;
 import org.dmfs.jems.iterable.composite.Joined;
 import org.dmfs.jems.iterable.decorators.Mapped;
 import org.dmfs.jems.iterable.elementary.Seq;
-import org.dmfs.opentaskspal.views.TaskListsView;
+import app.tasksandlists.pal.views.TaskListsView;
 import org.dmfs.provider.tasks.AuthorityUtil;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.utils.ManifestAppName;
 
 import java.util.ArrayList;

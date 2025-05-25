@@ -16,9 +16,9 @@
 
 package org.dmfs.provider.tasks.handler;
 
-import org.dmfs.tasks.contract.TaskContract.Property.Alarm;
-import org.dmfs.tasks.contract.TaskContract.Property.Category;
-import org.dmfs.tasks.contract.TaskContract.Property.Relation;
+import app.tasksandlists.contract.TaskContract.Property.Alarm;
+import app.tasksandlists.contract.TaskContract.Property.Category;
+import app.tasksandlists.contract.TaskContract.Property.Relation;
 
 
 /**

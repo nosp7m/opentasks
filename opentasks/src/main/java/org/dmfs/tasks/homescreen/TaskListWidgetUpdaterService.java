@@ -33,8 +33,8 @@ import android.widget.RemoteViewsService;
 
 import org.dmfs.provider.tasks.AuthorityUtil;
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.Instances;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.Instances;
 import org.dmfs.tasks.model.TaskFieldAdapters;
 import org.dmfs.tasks.utils.DateFormatter;
 import org.dmfs.tasks.utils.DateFormatter.DateFormatContext;

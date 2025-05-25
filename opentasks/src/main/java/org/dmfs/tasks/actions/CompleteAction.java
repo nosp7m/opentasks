@@ -16,8 +16,8 @@
 
 package org.dmfs.tasks.actions;
 
-import org.dmfs.opentaskspal.tasks.StatusData;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.pal.tasks.StatusData;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

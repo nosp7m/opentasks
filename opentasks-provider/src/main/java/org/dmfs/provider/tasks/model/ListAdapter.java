@@ -22,7 +22,7 @@ import android.database.Cursor;
 import org.dmfs.provider.tasks.model.adapters.IntegerFieldAdapter;
 import org.dmfs.provider.tasks.model.adapters.LongFieldAdapter;
 import org.dmfs.provider.tasks.model.adapters.StringFieldAdapter;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract.TaskLists;
 
 
 /**

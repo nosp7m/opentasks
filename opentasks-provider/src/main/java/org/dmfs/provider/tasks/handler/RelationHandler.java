@@ -21,8 +21,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import org.dmfs.provider.tasks.TaskDatabaseHelper;
-import org.dmfs.tasks.contract.TaskContract.Property.Relation;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Property.Relation;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 
 /**

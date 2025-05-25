@@ -24,7 +24,7 @@ import org.dmfs.jems.optional.elementary.Present;
 import org.dmfs.jems.procedure.composite.ForEach;
 import org.dmfs.jems.single.Single;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

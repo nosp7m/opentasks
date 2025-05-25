@@ -38,7 +38,7 @@ import org.dmfs.provider.tasks.model.TaskAdapter;
 import org.dmfs.provider.tasks.model.adapters.FieldAdapter;
 import org.dmfs.provider.tasks.processors.EntityProcessor;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 import java.util.Locale;
 

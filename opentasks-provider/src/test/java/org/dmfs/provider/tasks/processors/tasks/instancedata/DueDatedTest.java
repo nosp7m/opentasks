@@ -21,7 +21,7 @@ import android.content.ContentValues;
 import org.dmfs.jems.optional.elementary.Present;
 import org.dmfs.provider.tasks.utils.ContentValuesWithLong;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;

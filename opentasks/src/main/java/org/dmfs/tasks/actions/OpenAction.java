@@ -25,7 +25,7 @@ import android.os.RemoteException;
 import androidx.core.app.TaskStackBuilder;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

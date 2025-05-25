@@ -28,8 +28,8 @@ import android.widget.TextView;
 
 import org.dmfs.tasks.QuickAddDialogFragment;
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract.Instances;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract.Instances;
+import app.tasksandlists.contract.TaskContract.TaskLists;
 import org.dmfs.tasks.groupings.cursorloaders.CursorLoaderFactory;
 import org.dmfs.tasks.utils.ExpandableChildDescriptor;
 import org.dmfs.tasks.utils.ExpandableGroupDescriptor;

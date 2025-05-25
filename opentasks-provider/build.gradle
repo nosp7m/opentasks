@@ -38,7 +38,7 @@ dependencies {
     testImplementation project(':jems-testing')
     testImplementation deps.hamcrest
 
-    androidTestImplementation project(':opentaskspal')
+    androidTestImplementation project(':tasksandlists-pal')
     androidTestImplementation project(':contentpal-testing')
     androidTestImplementation project(':contenttestpal')
     androidTestImplementation deps.support_annotations

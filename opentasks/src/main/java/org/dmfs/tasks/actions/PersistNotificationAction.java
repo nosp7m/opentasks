@@ -23,9 +23,9 @@ import android.net.Uri;
 import android.os.RemoteException;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.opentaskspal.readdata.TaskVersion;
+import app.tasksandlists.pal.readdata.TaskVersion;
 import org.dmfs.tasks.actions.utils.NotificationPrefs;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.notification.state.RowStateInfo;
 import org.json.JSONException;
 import org.json.JSONObject;

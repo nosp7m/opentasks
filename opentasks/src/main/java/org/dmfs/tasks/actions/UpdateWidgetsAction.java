@@ -23,7 +23,7 @@ import android.content.Context;
 import android.net.Uri;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.homescreen.TaskListWidgetProvider;
 import org.dmfs.tasks.homescreen.TaskListWidgetProviderLarge;
 import org.dmfs.tasks.R;

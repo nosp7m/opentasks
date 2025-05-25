@@ -19,12 +19,12 @@ package org.dmfs.tasks.notification.state;
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.jems.optional.decorators.Mapped;
 import org.dmfs.jems.single.combined.Backed;
-import org.dmfs.opentaskspal.readdata.EffectiveDueDate;
-import org.dmfs.opentaskspal.readdata.TaskIsClosed;
-import org.dmfs.opentaskspal.readdata.TaskPin;
-import org.dmfs.opentaskspal.readdata.TaskStart;
+import app.tasksandlists.pal.readdata.EffectiveDueDate;
+import app.tasksandlists.pal.readdata.TaskIsClosed;
+import app.tasksandlists.pal.readdata.TaskPin;
+import app.tasksandlists.pal.readdata.TaskStart;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 import androidx.annotation.NonNull;
 

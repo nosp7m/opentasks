@@ -30,7 +30,7 @@ import org.dmfs.jems.single.combined.Backed;
 import org.dmfs.provider.tasks.AuthorityUtil;
 import org.dmfs.provider.tasks.utils.Range;
 import org.dmfs.tasks.ManageListActivity;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract.TaskLists;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -24,8 +24,8 @@ import android.graphics.Color;
 
 import org.dmfs.provider.tasks.AuthorityUtil;
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.TaskLists;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.TaskLists;
 
 
 public class DatabaseInitializedReceiver extends BroadcastReceiver

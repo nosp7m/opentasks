@@ -24,7 +24,7 @@ import android.os.RemoteException;
 
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.tasks.actions.utils.NotificationPrefs;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

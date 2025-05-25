@@ -35,9 +35,9 @@ import org.dmfs.provider.tasks.model.InstanceAdapter;
 import org.dmfs.provider.tasks.model.TaskAdapter;
 import org.dmfs.provider.tasks.processors.tasks.Instantiating;
 import org.dmfs.rfc5545.DateTime;
-import org.dmfs.tasks.contract.TaskContract;
-import org.dmfs.tasks.contract.TaskContract.Instances;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract.Instances;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 import java.util.TimeZone;
 

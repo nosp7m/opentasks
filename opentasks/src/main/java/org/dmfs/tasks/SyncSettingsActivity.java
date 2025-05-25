@@ -25,7 +25,7 @@ import android.widget.Button;
 
 import com.google.android.material.appbar.AppBarLayout;
 
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.utils.BaseActivity;
 
 

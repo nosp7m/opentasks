@@ -25,7 +25,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.dmfs.provider.tasks.AuthorityUtil;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.model.ContentSet;
 import org.dmfs.tasks.utils.BaseActivity;
 

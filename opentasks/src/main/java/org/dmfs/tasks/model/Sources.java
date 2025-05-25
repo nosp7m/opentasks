@@ -30,7 +30,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import org.dmfs.provider.tasks.AuthorityUtil;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.utils.AsyncModelLoader;
 import org.dmfs.tasks.utils.OnModelLoadedListener;
 

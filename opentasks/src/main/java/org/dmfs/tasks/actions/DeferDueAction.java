@@ -17,13 +17,13 @@
 package org.dmfs.tasks.actions;
 
 import org.dmfs.jems.optional.Optional;
-import org.dmfs.opentaskspal.readdata.EffectiveDueDate;
-import org.dmfs.opentaskspal.readdata.TaskDateTime;
-import org.dmfs.opentaskspal.tasks.DueData;
-import org.dmfs.opentaskspal.tasks.TimeData;
+import app.tasksandlists.pal.readdata.EffectiveDueDate;
+import app.tasksandlists.pal.readdata.TaskDateTime;
+import app.tasksandlists.pal.tasks.DueData;
+import app.tasksandlists.pal.tasks.TimeData;
 import org.dmfs.rfc5545.DateTime;
 import org.dmfs.rfc5545.Duration;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

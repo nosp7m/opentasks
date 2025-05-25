@@ -22,10 +22,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.dmfs.provider.tasks.TaskDatabaseHelper.CategoriesMapping;
 import org.dmfs.provider.tasks.TaskDatabaseHelper.Tables;
-import org.dmfs.tasks.contract.TaskContract.Categories;
-import org.dmfs.tasks.contract.TaskContract.Properties;
-import org.dmfs.tasks.contract.TaskContract.Property.Category;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Categories;
+import app.tasksandlists.contract.TaskContract.Properties;
+import app.tasksandlists.contract.TaskContract.Property.Category;
+import app.tasksandlists.contract.TaskContract.Tasks;
 
 
 /**

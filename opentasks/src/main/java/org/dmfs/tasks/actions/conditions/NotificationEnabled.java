@@ -24,7 +24,7 @@ import android.preference.PreferenceManager;
 import org.dmfs.android.contentpal.RowDataSnapshot;
 import org.dmfs.jems.function.BiFunction;
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

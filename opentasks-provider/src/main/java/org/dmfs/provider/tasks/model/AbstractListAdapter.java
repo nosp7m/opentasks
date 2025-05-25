@@ -21,7 +21,7 @@ import android.content.ContentValues;
 import android.net.Uri;
 
 import org.dmfs.provider.tasks.model.adapters.FieldAdapter;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 
 /**

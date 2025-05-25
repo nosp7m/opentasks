@@ -26,7 +26,7 @@ import android.content.pm.ServiceInfo;
 import android.content.res.XmlResourceParser;
 
 import org.dmfs.tasks.R;
-import org.dmfs.tasks.contract.TaskContract.Tasks;
+import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.model.adapters.BooleanFieldAdapter;
 import org.dmfs.tasks.model.adapters.FieldAdapter;
 import org.dmfs.tasks.model.adapters.StringFieldAdapter;

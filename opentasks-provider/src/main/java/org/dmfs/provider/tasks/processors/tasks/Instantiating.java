@@ -39,7 +39,7 @@ import org.dmfs.provider.tasks.utils.Limited;
 import org.dmfs.provider.tasks.utils.OverrideValuesFunction;
 import org.dmfs.provider.tasks.utils.Range;
 import org.dmfs.provider.tasks.utils.RowIterator;
-import org.dmfs.tasks.contract.TaskContract;
+import app.tasksandlists.contract.TaskContract;
 
 import java.util.Locale;
 
