@@ -74,7 +74,7 @@ public final class Instantiating implements EntityProcessor<TaskAdapter>
      * TODO: get rid of it
      */
     private final static BooleanFieldAdapter<TaskAdapter> UPDATE_REQUESTED = new BooleanFieldAdapter<TaskAdapter>(
-            "org.dmfs.tasks.TaskInstanceProcessor.UPDATE_REQUESTED");
+            "app.tasksandlists.TaskInstanceProcessor.UPDATE_REQUESTED");
 
     // for now we only expand the next upcoming instance
     private final static int UPCOMING_INSTANCE_COUNT_LIMIT = 1;

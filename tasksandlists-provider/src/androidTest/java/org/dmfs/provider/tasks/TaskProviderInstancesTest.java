@@ -51,7 +51,7 @@ import app.tasksandlists.pal.tables.TasksTable;
 import app.tasksandlists.pal.tasklists.NameData;
 import app.tasksandlists.pal.tasks.TimeData;
 import app.tasksandlists.pal.tasks.TitleData;
-import org.dmfs.opentaskstestpal.InstanceTestData;
+import app.tasksandlists.testpal.InstanceTestData;
 import org.dmfs.rfc5545.DateTime;
 import app.tasksandlists.contract.TaskContract.Instances;
 import app.tasksandlists.contract.TaskContract.TaskLists;

@@ -1316,17 +1316,17 @@ public final class TaskProvider extends SQLiteContentProvider implements OnAccou
         switch (mUriMatcher.match(uri))
         {
             case LISTS:
-                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/org.dmfs.tasks." + TaskLists.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/app.tasksandlists." + TaskLists.CONTENT_URI_PATH;
             case LIST_ID:
-                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/org.dmfs.tasks." + TaskLists.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/app.tasksandlists." + TaskLists.CONTENT_URI_PATH;
             case TASKS:
-                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/org.dmfs.tasks." + Tasks.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/app.tasksandlists." + Tasks.CONTENT_URI_PATH;
             case TASK_ID:
-                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/org.dmfs.tasks." + Tasks.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/app.tasksandlists." + Tasks.CONTENT_URI_PATH;
             case INSTANCES:
-                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/org.dmfs.tasks." + Instances.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_DIR_BASE_TYPE + "/app.tasksandlists." + Instances.CONTENT_URI_PATH;
             case INSTANCE_ID:
-                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/org.dmfs.tasks." + Instances.CONTENT_URI_PATH;
+                return ContentResolver.CURSOR_ITEM_BASE_TYPE + "/app.tasksandlists." + Instances.CONTENT_URI_PATH;
             default:
                 throw new IllegalArgumentException("Unsupported URI: " + uri);
         }
@@ -1346,7 +1346,7 @@ public final class TaskProvider extends SQLiteContentProvider implements OnAccou
         if (Boolean.TRUE.equals(mStaleListCreated.get()))
         {
             // notify UI about the stale lists, it's up the UI to deal with this, either by showing a notification or an instant popup.
-            Intent visbilityRequest = new Intent("org.dmfs.tasks.action.STALE_LIST_BROADCAST").setPackage(getContext().getPackageName());
+            Intent visbilityRequest = new Intent("app.tasksandlists.action.STALE_LIST_BROADCAST").setPackage(getContext().getPackageName());
             getContext().sendBroadcast(visbilityRequest);
         }
     }

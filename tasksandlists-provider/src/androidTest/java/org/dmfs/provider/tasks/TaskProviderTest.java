@@ -59,7 +59,7 @@ import app.tasksandlists.pal.tasks.SyncIdData;
 import app.tasksandlists.pal.tasks.TimeData;
 import app.tasksandlists.pal.tasks.TitleData;
 import app.tasksandlists.pal.tasks.VersionData;
-import org.dmfs.opentaskstestpal.InstanceTestData;
+import app.tasksandlists.testpal.InstanceTestData;
 import org.dmfs.rfc5545.DateTime;
 import org.dmfs.rfc5545.Duration;
 import org.dmfs.rfc5545.recur.InvalidRecurrenceRuleException;

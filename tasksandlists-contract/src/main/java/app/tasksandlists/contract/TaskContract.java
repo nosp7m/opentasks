@@ -86,7 +86,7 @@ public final class TaskContract
      * <p/>
      * The intent data represents the authority of the provider, the MIME type will be {@link #MIMETYPE_AUTHORITY}.
      */
-    public static final String ACTION_DATABASE_INITIALIZED = "org.dmfs.tasks.DATABASE_INITIALIZED";
+    public static final String ACTION_DATABASE_INITIALIZED = "app.tasksandlists.DATABASE_INITIALIZED";
 
     /**
      * A MIME type of an authority. Authorities itself don't seem to have a MIME type in Android, so we just use our own.
@@ -127,7 +127,7 @@ public final class TaskContract
      * The name of the {@link Intent#ACTION_PROVIDER_CHANGED} extra that contains the {@link ArrayList} of {@link Uri}s that have been modified. This always
      * goes along with an {@link #EXTRA_OPERATIONS} which contains a code for the operation executed on a Uri at the same index.
      */
-    public final static String EXTRA_OPERATIONS_URIS = "org.dmfs.tasks.OPERATIONS_URIS";
+    public final static String EXTRA_OPERATIONS_URIS = "app.tasksandlists.OPERATIONS_URIS";
 
     /**
      * The name of the {@link Intent#ACTION_PROVIDER_CHANGED} extra that contains the {@link ArrayList} of provider operation codes. The following codes are
@@ -138,7 +138,7 @@ public final class TaskContract
      * <li>2 - for deletes</li>
      * </ul>
      */
-    public final static String EXTRA_OPERATIONS = "org.dmfs.tasks.OPERATIONS";
+    public final static String EXTRA_OPERATIONS = "app.tasksandlists.OPERATIONS";
 
 
     /**

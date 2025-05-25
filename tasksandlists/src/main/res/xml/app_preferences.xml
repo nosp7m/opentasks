@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Preference
+            app:title="@string/opentasks_settings_notification_enable"
+            app:key="notifications"
+            app:fragment="app.tasksandlists.AppNotificationSettingsFragment" />
+    <Preference
+            app:title="@string/opentasks_preference_appearance"
+            app:fragment="app.tasksandlists.AppAppearanceSettingsFragment" />
+</androidx.preference.PreferenceScreen>

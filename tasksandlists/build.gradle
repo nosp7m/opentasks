@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    defaultConfig {
+        applicationId "app.tasksandlists"
+        minSdkVersion MIN_SDK_VERSION.toInteger()
+        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        versionCode VERSION_MAJOR.toInteger() * 1000000 + VERSION_MINOR.toInteger() * 1000 + VERSION_PATCH.toInteger()
+        println 'versionCode: ' + versionCode
+        versionName VERSION_MAJOR + '.' + VERSION_MINOR + '.' + VERSION_PATCH
+        println 'versionName: ' + versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
+        signingConfigs {
+            release {
+                storeFile file(System.getenv('DMFS_RELEASE_KEYSTORE'))
+                storePassword System.getenv('DMFS_RELEASE_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('DMFS_RELEASE_KEY_ALIAS')
+                keyPassword System.getenv('DMFS_RELEASE_KEY_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
+                signingConfig signingConfigs.release
+            }
+            minifyEnabled true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    productFlavors {
+    }
+
+    lintOptions {
+        disable 'MissingTranslation' // TODO
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':tasksandlists-theme')
+    implementation project(':tasksandlists-provider')
+    implementation deps.support_appcompat
+    implementation deps.support_design
+    implementation project(':xmlobjects')
+    implementation project(':android-xml-magic')
+    implementation deps.android_dashclock
+    implementation project(':color-picker')
+    implementation(deps.codeka_carrot) {
+        exclude module: 'iterators' // TODO Remove when iterators have been removed from codeka:carrot
+    }
+    implementation project(':androidcarrot')
+    implementation project(':jems')
+    implementation project(':rfc5545-datetime')
+    implementation project(':color-bolts')
+    implementation project(':retention-magic')
+
+    testImplementation deps.junit
+    testImplementation deps.robolectric
+    testImplementation project(':jems-testing')
+
+    androidTestImplementation deps.support_test_runner
+    androidTestImplementation deps.support_test_rules
+    implementation project(path: ':tasksandlists-pal')
+
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.maltaisn:recurpicker:2.1.4'
+}
