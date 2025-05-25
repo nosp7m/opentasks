@@ -27,7 +27,7 @@ android {
 }
 
 dependencies {
-    implementation project(':opentasks-contract')
+    implementation project(':tasksandlists-contract')
     implementation project(':rfc5545-datetime')
     implementation project(':lib-recur')
     implementation project(':jems')

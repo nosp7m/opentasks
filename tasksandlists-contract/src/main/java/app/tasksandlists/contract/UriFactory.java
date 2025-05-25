@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.dmfs.tasks.contract;
+package app.tasksandlists.contract;
 
 import android.net.Uri;
 
