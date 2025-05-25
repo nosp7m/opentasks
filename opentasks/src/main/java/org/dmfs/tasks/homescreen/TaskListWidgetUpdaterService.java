@@ -31,7 +31,7 @@ import android.text.format.Time;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.R;
 import app.tasksandlists.contract.TaskContract;
 import app.tasksandlists.contract.TaskContract.Instances;

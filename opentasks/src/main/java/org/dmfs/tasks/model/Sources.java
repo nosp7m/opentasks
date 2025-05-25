@@ -29,7 +29,7 @@ import android.content.SyncAdapterType;
 import android.text.TextUtils;
 import android.util.Log;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import app.tasksandlists.contract.TaskContract;
 import org.dmfs.tasks.utils.AsyncModelLoader;
 import org.dmfs.tasks.utils.OnModelLoadedListener;

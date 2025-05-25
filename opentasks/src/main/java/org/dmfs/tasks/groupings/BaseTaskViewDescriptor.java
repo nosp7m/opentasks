@@ -36,7 +36,7 @@ import com.google.android.material.card.MaterialCardView;
 import org.dmfs.android.bolts.color.colors.AttributeColor;
 import org.dmfs.iterables.decorators.Sieved;
 import org.dmfs.jems.single.elementary.Reduced;
-import org.dmfs.provider.tasks.model.TaskAdapter;
+import app.tasksandlists.provider.model.TaskAdapter;
 import org.dmfs.tasks.R;
 import org.dmfs.tasks.model.DescriptionItem;
 import org.dmfs.tasks.model.TaskFieldAdapters;

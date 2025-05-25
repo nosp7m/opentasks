@@ -45,7 +45,7 @@ import android.widget.TextView.OnEditorActionListener;
 import org.dmfs.android.retentionmagic.SupportDialogFragment;
 import org.dmfs.android.retentionmagic.annotations.Parameter;
 import org.dmfs.android.retentionmagic.annotations.Retain;
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import app.tasksandlists.contract.TaskContract;
 import app.tasksandlists.contract.TaskContract.TaskLists;
 import app.tasksandlists.contract.TaskContract.Tasks;

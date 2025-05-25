@@ -106,22 +106,22 @@ public final class TaskContract
     /**
      * A Long extra that contains a timestamp of the event that's triggered. So this is either the timestamp of the start or due date of the task.
      */
-    public final static String EXTRA_TASK_TIMESTAMP = "org.dmfs.provider.tasks.extra.TIMESTAMP";
+    public final static String EXTRA_TASK_TIMESTAMP = "app.tasksandlists.provider.extra.TIMESTAMP";
 
     /**
      * A Boolean extra to indicate that the event that was triggered is an all-day date.
      */
-    public final static String EXTRA_TASK_ALLDAY = "org.dmfs.provider.tasks.extra.ALLDAY";
+    public final static String EXTRA_TASK_ALLDAY = "app.tasksandlists.provider.extra.ALLDAY";
 
     /**
      * A String extra containing the timezone id of the task.
      */
-    public final static String EXTRA_TASK_TIMEZONE = "org.dmfs.provider.tasks.extra.TIMEZONE";
+    public final static String EXTRA_TASK_TIMEZONE = "app.tasksandlists.provider.extra.TIMEZONE";
 
     /**
      * A String extra containing the title of the task.
      */
-    public final static String EXTRA_TASK_TITLE = "org.dmfs.provider.tasks.extra.TITLE";
+    public final static String EXTRA_TASK_TITLE = "app.tasksandlists.provider.extra.TITLE";
 
     /**
      * The name of the {@link Intent#ACTION_PROVIDER_CHANGED} extra that contains the {@link ArrayList} of {@link Uri}s that have been modified. This always

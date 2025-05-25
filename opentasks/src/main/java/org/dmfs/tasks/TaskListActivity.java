@@ -41,7 +41,7 @@ import org.dmfs.android.bolts.color.colors.PrimaryColor;
 import org.dmfs.android.bolts.color.elementary.ValueColor;
 import org.dmfs.android.retentionmagic.annotations.Retain;
 import org.dmfs.jems.single.adapters.Unchecked;
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import app.tasksandlists.contract.TaskContract.Tasks;
 import org.dmfs.tasks.groupings.AbstractGroupingFactory;
 import org.dmfs.tasks.groupings.ByDueDate;

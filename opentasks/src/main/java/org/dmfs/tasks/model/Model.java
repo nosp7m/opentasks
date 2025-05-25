@@ -27,8 +27,8 @@ import android.text.TextUtils;
 import org.dmfs.iterables.decorators.Sieved;
 import org.dmfs.jems.optional.adapters.First;
 import org.dmfs.jems.single.combined.Backed;
-import org.dmfs.provider.tasks.AuthorityUtil;
-import org.dmfs.provider.tasks.utils.Range;
+import app.tasksandlists.provider.AuthorityUtil;
+import app.tasksandlists.provider.utils.Range;
 import org.dmfs.tasks.ManageListActivity;
 import app.tasksandlists.contract.TaskContract.TaskLists;
 

@@ -26,7 +26,7 @@ import android.view.View.OnClickListener;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.QuickAddDialogFragment;
 import org.dmfs.tasks.R;
 import app.tasksandlists.contract.TaskContract.Instances;

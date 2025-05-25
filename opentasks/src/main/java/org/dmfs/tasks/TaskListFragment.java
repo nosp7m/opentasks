@@ -54,7 +54,7 @@ import org.dmfs.android.bolts.color.elementary.ValueColor;
 import org.dmfs.android.retentionmagic.SupportFragment;
 import org.dmfs.android.retentionmagic.annotations.Parameter;
 import org.dmfs.android.retentionmagic.annotations.Retain;
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import app.tasksandlists.contract.TaskContract;
 import app.tasksandlists.contract.TaskContract.Instances;
 import app.tasksandlists.contract.TaskContract.Tasks;

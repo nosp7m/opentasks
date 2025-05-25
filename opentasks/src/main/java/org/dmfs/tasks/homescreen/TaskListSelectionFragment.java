@@ -30,7 +30,7 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.R;
 import app.tasksandlists.contract.TaskContract;
 import app.tasksandlists.contract.TaskContract.TaskLists;

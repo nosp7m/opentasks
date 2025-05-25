@@ -22,7 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.R;
 import app.tasksandlists.contract.TaskContract;
 import app.tasksandlists.contract.TaskContract.TaskLists;

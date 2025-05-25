@@ -30,7 +30,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.EditTaskActivity;
 import org.dmfs.tasks.R;
 import org.dmfs.tasks.TaskListActivity;

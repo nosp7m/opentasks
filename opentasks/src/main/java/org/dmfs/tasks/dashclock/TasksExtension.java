@@ -26,7 +26,7 @@ import android.text.format.Time;
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
 
-import org.dmfs.provider.tasks.AuthorityUtil;
+import app.tasksandlists.provider.AuthorityUtil;
 import org.dmfs.tasks.EditTaskActivity;
 import org.dmfs.tasks.R;
 import app.tasksandlists.contract.TaskContract;
