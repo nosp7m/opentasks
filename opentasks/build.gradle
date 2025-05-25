@@ -49,7 +49,7 @@ android {
 }
 
 dependencies {
-    implementation project(':opentasks-theme')
+    implementation project(':tasksandlists-theme')
     implementation project(':tasksandlists-provider')
     implementation deps.support_appcompat
     implementation deps.support_design
