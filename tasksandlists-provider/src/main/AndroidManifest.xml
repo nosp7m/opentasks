@@ -3,22 +3,22 @@
         package="app.tasksandlists.provider">
 
     <permission-group
-            android:name="org.dmfs.tasks.permissiongroup.Tasks"
+            android:name="app.tasksandlists.permissiongroup.Tasks"
             android:label="@string/opentasks_provider_label"
             android:icon="@drawable/ic_24_opentasks"
             android:description="@string/opentasks_permission_group_description_tasks"/>
 
     <permission
-            android:name="org.dmfs.permission.READ_TASKS"
+            android:name="app.tasksandlists.permission.READ_TASKS"
             android:description="@string/opentasks_permission_description_read_tasks"
             android:label="@string/opentasks_permission_read_tasks"
-            android:permissionGroup="org.dmfs.tasks.permissiongroup.Tasks"
+            android:permissionGroup="app.tasksandlists.permissiongroup.Tasks"
             android:protectionLevel="dangerous"/>
     <permission
-            android:name="org.dmfs.permission.WRITE_TASKS"
+            android:name="app.tasksandlists.permission.WRITE_TASKS"
             android:description="@string/opentasks_permission_description_write_tasks"
             android:label="@string/opentasks_permission_write_tasks"
-            android:permissionGroup="org.dmfs.tasks.permissiongroup.Tasks"
+            android:permissionGroup="app.tasksandlists.permissiongroup.Tasks"
             android:protectionLevel="dangerous"/>
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
@@ -33,8 +33,8 @@
                 android:exported="true"
                 android:label="@string/opentasks_provider_label"
                 android:multiprocess="false"
-                android:readPermission="org.dmfs.permission.READ_TASKS"
-                android:writePermission="org.dmfs.permission.WRITE_TASKS"/>
+                android:readPermission="app.tasksandlists.permission.READ_TASKS"
+                android:writePermission="app.tasksandlists.permission.WRITE_TASKS"/>
 
         <receiver
                 android:name="app.tasksandlists.provider.TaskProviderBroadcastReceiver"

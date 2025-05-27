@@ -6,8 +6,8 @@
     <uses-sdk tools:overrideLibrary="org.dmfs.android.bolts" />
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="org.dmfs.permission.READ_TASKS" />
-    <uses-permission android:name="org.dmfs.permission.WRITE_TASKS" />
+    <uses-permission android:name="app.tasksandlists.permission.READ_TASKS" />
+    <uses-permission android:name="app.tasksandlists.permission.WRITE_TASKS" />
     <uses-permission
             android:name="android.permission.GET_ACCOUNTS"
             android:maxSdkVersion="25" />
