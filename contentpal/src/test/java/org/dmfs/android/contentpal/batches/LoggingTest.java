@@ -51,7 +51,7 @@ public class LoggingTest
     @Test
     public void testEmpty()
     {
-        assertThat(new Logging<>(failingMock(Procedure.class), new EmptyIterable<>()), emptyIterable());
+        assertThat((Iterable<Object>) new Logging<>(failingMock(Procedure.class), new EmptyIterable<>()), emptyIterable());
     }
 
 

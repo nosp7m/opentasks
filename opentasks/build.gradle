@@ -1,17 +1,29 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+
     defaultConfig {
-        applicationId "org.dmfs.tasks"
-        minSdkVersion MIN_SDK_VERSION.toInteger()
-        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        minSdkVersion = MIN_SDK_VERSION.toInteger()
+        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        namespace = 'org.dmfs.tasks'
+        applicationId 'org.dmfs.tasks'
         versionCode VERSION_MAJOR.toInteger() * 1000000 + VERSION_MINOR.toInteger() * 1000 + VERSION_PATCH.toInteger()
         println 'versionCode: ' + versionCode
         versionName VERSION_MAJOR + '.' + VERSION_MINOR + '.' + VERSION_PATCH
         println 'versionName: ' + versionName
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
     if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
         signingConfigs {
             release {
@@ -22,29 +34,27 @@ android {
             }
         }
     }
+
     buildTypes {
         release {
             if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
-                signingConfig signingConfigs.release
+                signingConfig = signingConfigs.release
             }
-            minifyEnabled true
-            proguardFiles 'proguard.cfg'
+            minifyEnabled false
+            shrinkResources false
+            //minifyEnabled true
+            //proguardFiles 'proguard.cfg'
         }
     }
-    packagingOptions {
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-    }
-
-    productFlavors {
+    lint {
+        abortOnError false       // Prevent build failure on lint errors
+        checkReleaseBuilds false // Disable lint for release builds
     }
 
     lintOptions {
+        abortOnError false       // Prevent build failure on lint errors
+        checkReleaseBuilds false // Disable lint for release builds
         disable 'MissingTranslation' // TODO
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -65,6 +75,10 @@ dependencies {
     implementation project(':rfc5545-datetime')
     implementation project(':color-bolts')
     implementation project(':retention-magic')
+
+    implementation deps.kotlin_stdlib
+    implementation deps.kotlin_reflect
+    implementation deps.kotlinx_coroutines
 
     testImplementation deps.junit
     testImplementation deps.robolectric

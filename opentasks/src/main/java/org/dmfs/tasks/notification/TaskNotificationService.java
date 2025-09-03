@@ -104,7 +104,7 @@ public class TaskNotificationService extends JobIntentService
                  * Notifications of tasks which have been unpinned are removed.
                  * Notifications of tasks which have changed otherwise are updated.
                  */
-                String authority = getString(R.string.opentasks_authority);
+                String authority = getString(org.dmfs.tasks.provider.R.string.opentasks_authority);
 
                 Iterable<TaskNotificationState> currentNotifications = new org.dmfs.tasks.utils.Sorted<>(
                         (o, o2) -> (int) (ContentUris.parseId(o.instance()) - ContentUris.parseId(o2.instance())),

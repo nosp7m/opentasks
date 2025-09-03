@@ -19,7 +19,7 @@ package org.dmfs.android.bolts.color.colors;
 
 import android.content.Context;
 
-import org.dmfs.android.bolts.R;
+import org.dmfs.android.sync.opentasks_theme.R;
 import org.dmfs.android.bolts.color.Color;
 
 import androidx.annotation.NonNull;

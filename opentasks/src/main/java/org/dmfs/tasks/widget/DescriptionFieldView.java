@@ -271,7 +271,7 @@ public class DescriptionFieldView extends AbstractFieldView implements OnChecked
 
         ColorStateList colorStateList = new ColorStateList(
                 new int[][] { new int[] { android.R.attr.state_focused }, new int[] { -android.R.attr.state_focused } },
-                new int[] { new AttributeColor(getContext(), R.attr.colorPrimary).argb(), 0 });
+                new int[] { new AttributeColor(getContext(), org.dmfs.android.sync.opentasks_theme.R.attr.colorPrimary).argb(), 0 });
         ViewCompat.setBackgroundTintList(text, colorStateList);
 
         text.setOnFocusChangeListener((v, hasFocus) -> {

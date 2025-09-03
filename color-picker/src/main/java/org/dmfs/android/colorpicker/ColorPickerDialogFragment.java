@@ -160,7 +160,7 @@ public final class ColorPickerDialogFragment extends SupportDialogFragment imple
         }
 
         DrawablePagerTabStrip titleStrip = view.findViewById(R.id.pager_title_strip);
-        titleStrip.setTabIndicatorColor(new AttributeColor(getContext(), R.attr.colorAccent).argb());
+        titleStrip.setTabIndicatorColor(new AttributeColor(getContext(), org.dmfs.android.sync.opentasks_theme.R.attr.colorAccent).argb());
         return view;
     }
 

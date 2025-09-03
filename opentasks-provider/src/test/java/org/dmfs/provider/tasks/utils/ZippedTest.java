@@ -51,6 +51,6 @@ public class ZippedTest
     public void testAbsent()
     {
         Object dummyObject = new Object();
-        assertThat(new Zipped<>(absent(), new ValueSingle<>(dummyObject), dummy(BiFunction.class)), hasValue(sameInstance(dummyObject)));
+        assertThat((Zipped<Object>) new Zipped<>(absent(), new ValueSingle<>(dummyObject), dummy(BiFunction.class)), hasValue(sameInstance(dummyObject)));
     }
 }

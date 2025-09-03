@@ -101,8 +101,8 @@ public final class AppSettingsActivity extends BaseActivity implements Preferenc
                     mPrefs.getBoolean(
                             getString(R.string.opentasks_pref_appearance_dark_theme),
                             getResources().getBoolean(R.bool.opentasks_dark_theme_default)) ?
-                            R.style.OpenTasks_Theme_Dark :
-                            R.style.OpenTasks_Theme_Light,
+                            org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Dark :
+                            org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Light,
                     true);
         }
         return theme;

@@ -1,21 +1,23 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion MIN_SDK_VERSION.toInteger()
-        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        minSdkVersion = MIN_SDK_VERSION.toInteger()
+        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
+
+    namespace = 'org.dmfs.android.retentionmagic'
 }
 
 dependencies {

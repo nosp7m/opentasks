@@ -175,7 +175,7 @@ public class RelationHandler extends PropertyHandler
         }
         else
         {
-            type = oldValues.getInt(oldValues.getColumnIndex(Relation.RELATED_TYPE));
+            type = oldValues.getInt(Math.max(0, oldValues.getColumnIndex(Relation.RELATED_TYPE)));
         }
 
         if (type == Relation.RELTYPE_PARENT)
@@ -228,7 +228,7 @@ public class RelationHandler extends PropertyHandler
      */
     private void clearParentId(SQLiteDatabase db, long taskId, Cursor oldValues)
     {
-        int type = oldValues.getInt(oldValues.getColumnIndex(Relation.RELATED_TYPE));
+        int type = oldValues.getInt(Math.max(0, oldValues.getColumnIndex(Relation.RELATED_TYPE)));
 
         /*
          * This is more complicated than it may sound. We don't know the order in which relations are created, updated or removed. So it's possible that a new

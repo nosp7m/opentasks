@@ -19,30 +19,24 @@ plugins {
 }
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion MIN_SDK_VERSION.toInteger()
-        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        minSdkVersion = MIN_SDK_VERSION.toInteger()
+        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
+
+    namespace = 'org.dmfs.android.sync.opentasks_theme'
 }
 
 dependencies {
-
     implementation deps.support_appcompat
     implementation deps.support_design
 }

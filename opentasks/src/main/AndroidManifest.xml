@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        package="org.dmfs.tasks">
+        xmlns:tools="http://schemas.android.com/tools">
     <!-- TODO Remove after https://github.com/dmfs/opentasks/issues/392 -->
     <uses-sdk tools:overrideLibrary="org.dmfs.android.bolts" />
 
@@ -10,7 +9,7 @@
     <uses-permission android:name="org.dmfs.permission.WRITE_TASKS" />
     <uses-permission
             android:name="android.permission.GET_ACCOUNTS"
-            android:maxSdkVersion="25" />
+            android:maxSdkVersion="35" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -30,7 +29,8 @@
         <activity
                 android:name=".TaskListActivity"
                 android:label="@string/title_task_list"
-                android:launchMode="singleTask">
+                android:launchMode="singleTask"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -44,7 +44,8 @@
                 android:label="@string/title_task_detail"
                 android:parentActivityName=".TaskListActivity"
                 android:theme="@style/OpenTasksAppTheme"
-                android:windowSoftInputMode="adjustResize">
+                android:windowSoftInputMode="adjustResize"
+                android:exported="true">
             <intent-filter android:label="edit">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -67,7 +68,8 @@
                 android:label="@string/activity_add_task_title"
                 android:parentActivityName=".TaskListActivity"
                 android:theme="@style/DetailsTheme"
-                android:windowSoftInputMode="stateHidden|adjustResize">
+                android:windowSoftInputMode="stateHidden|adjustResize"
+                android:exported="true">
             <meta-data
                     android:name="android.support.PARENT_ACTIVITY"
                     android:value="org.dmfs.tasks.TaskListActivity" />
@@ -156,7 +158,8 @@
         <activity
                 android:name=".homescreen.TaskListWidgetSettingsActivity"
                 android:label="@string/task_list_selection_title"
-                android:theme="@style/OpenTasks_BaseTheme.Light.Dialog">
+                android:theme="@style/OpenTasks_BaseTheme.Light.Dialog"
+                android:exported="false">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
@@ -168,7 +171,8 @@
 
         <receiver
                 android:name=".homescreen.TaskListWidgetProvider"
-                android:label="@string/task_list_widget_title">
+                android:label="@string/task_list_widget_title"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -198,7 +202,8 @@
         <receiver
                 android:name=".homescreen.TaskListWidgetProviderLarge"
                 android:enabled="true"
-                android:label="@string/task_list_widget_title_4x4">
+                android:label="@string/task_list_widget_title_4x4"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -231,7 +236,8 @@
                 android:name=".dashclock.TasksExtension"
                 android:icon="@drawable/ic_dashboard"
                 android:label="@string/dashclock_extension_title"
-                android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+                android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA"
+                android:exported="true">
             <intent-filter>
                 <action android:name="com.google.android.apps.dashclock.Extension" />
             </intent-filter>
@@ -260,7 +266,8 @@
         <!-- Manage List -->
         <activity
                 android:name=".ManageListActivity"
-                android:theme="@style/OpenTasks_Theme.Default.Dialog">
+                android:theme="@style/OpenTasks_Theme.Default.Dialog"
+                android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.INSERT" />
 
@@ -346,7 +353,8 @@
                 android:description="@string/quicksettingstile_create"
                 android:icon="@drawable/content_edit"
                 android:label="@string/quicksettingstile_create"
-                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+                android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.service.quicksettings.action.QS_TILE" />
             </intent-filter>

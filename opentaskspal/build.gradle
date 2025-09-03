@@ -1,20 +1,23 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 android {
-    compileSdkVersion COMPILE_SDK_VERSION.toInteger()
+    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion MIN_SDK_VERSION.toInteger()
-        targetSdkVersion TARGET_SDK_VERSION.toInteger()
+        minSdkVersion = MIN_SDK_VERSION.toInteger()
+        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+
+        testInstrumentationRunner = 'androidx.test.runner.AndroidJUnitRunner'
     }
-    packagingOptions {
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/LICENSE'
-    }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
+
+    namespace = 'org.dmfs.opentaskspal'
 }
 
 dependencies {

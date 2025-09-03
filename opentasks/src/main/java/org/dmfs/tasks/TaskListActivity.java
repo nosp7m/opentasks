@@ -495,27 +495,18 @@ public class TaskListActivity extends BaseActivity implements TaskListFragment.C
 
     private void updateTitle(int pageId)
     {
-        switch (pageId)
-        {
-            case R.id.task_group_by_list:
-                getSupportActionBar().setTitle(R.string.task_group_title_list);
-                break;
-            case R.id.task_group_by_start:
-                getSupportActionBar().setTitle(R.string.task_group_title_start);
-                break;
-            case R.id.task_group_by_due:
-                getSupportActionBar().setTitle(R.string.task_group_title_due);
-                break;
-            case R.id.task_group_by_priority:
-                getSupportActionBar().setTitle(R.string.task_group_title_priority);
-                break;
-            case R.id.task_group_by_progress:
-                getSupportActionBar().setTitle(R.string.task_group_title_progress);
-                break;
-
-            default:
-                getSupportActionBar().setTitle(R.string.task_group_title_default);
-                break;
+        if (pageId == R.id.task_group_by_list) {
+            getSupportActionBar().setTitle(R.string.task_group_title_list);
+        } else if (pageId == R.id.task_group_by_start) {
+            getSupportActionBar().setTitle(R.string.task_group_title_start);
+        } else if (pageId == R.id.task_group_by_due) {
+            getSupportActionBar().setTitle(R.string.task_group_title_due);
+        } else if (pageId == R.id.task_group_by_priority) {
+            getSupportActionBar().setTitle(R.string.task_group_title_priority);
+        } else if (pageId == R.id.task_group_by_progress) {
+            getSupportActionBar().setTitle(R.string.task_group_title_progress);
+        } else {
+            getSupportActionBar().setTitle(R.string.task_group_title_default);
         }
     }
 
@@ -802,8 +793,8 @@ public class TaskListActivity extends BaseActivity implements TaskListFragment.C
                     mPrefs.getBoolean(
                             getString(R.string.opentasks_pref_appearance_dark_theme),
                             getResources().getBoolean(R.bool.opentasks_dark_theme_default)) ?
-                            R.style.OpenTasks_Theme_Dark :
-                            R.style.OpenTasks_Theme_Light,
+                            org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Dark :
+                            org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Light,
                     true);
         }
         return theme;

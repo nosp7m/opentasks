@@ -1,13 +1,25 @@
-apply plugin: 'java-library'
+plugins {
+    id 'java-library'
+    id 'jacoco'
+}
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
 configurations {
     pom
 }
 
-apply from: 'jacoco.gradle'
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+check.dependsOn jacocoTestReport
 
 dependencies {
     api project(':jems')

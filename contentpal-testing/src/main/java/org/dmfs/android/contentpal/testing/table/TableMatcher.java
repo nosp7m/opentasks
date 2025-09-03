@@ -41,19 +41,16 @@ public final class TableMatcher
     public static <Contract> Matcher<Table<Contract>> table(Uri contentUri, Matcher<? super Table<Contract>>... tableMatcher)
     {
         return allOf(
-            new Joined<>(
+            (Iterable<Matcher<? super Table<Contract>>>) new Joined<>(
                 new Seq<>(
-                    having("insert", table -> table.insertOperation(uriBuilder -> uriBuilder), builds(insertOperation(), targets(contentUri))),
-                    having("update",
-                        table -> table.updateOperation(uriBuilder -> uriBuilder, new Mocked<>("")),
-                        builds(updateOperation(), targets(contentUri))),
-                    having("delete",
-                        table -> table.deleteOperation(uriBuilder -> uriBuilder, new Mocked<>("")),
-                        builds(deleteOperation(), targets(contentUri))),
-                    having("assert",
-                        table -> table.assertOperation(uriBuilder -> uriBuilder, new Mocked<>("")),
-                        builds(assertOperation(), targets(contentUri)))),
-                new Seq<>(tableMatcher)));
+                    having("insert", (Table<Contract> table) -> table.insertOperation(uriBuilder -> uriBuilder), builds(insertOperation(), targets(contentUri))),
+                    having("update", (Table<Contract> table) -> table.updateOperation(uriBuilder -> uriBuilder, new Mocked<>("")), builds(updateOperation(), targets(contentUri))),
+                    having("delete", (Table<Contract> table) -> table.deleteOperation(uriBuilder -> uriBuilder, new Mocked<>("")), builds(deleteOperation(), targets(contentUri))),
+                    having("assert", (Table<Contract> table) -> table.assertOperation(uriBuilder -> uriBuilder, new Mocked<>("")), builds(assertOperation(), targets(contentUri)))
+                ),
+                new Seq<>(tableMatcher)
+            )
+        );
     }
 
 

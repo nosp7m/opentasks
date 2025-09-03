@@ -1,32 +1,34 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext.kotlin_version = '1.8.22'
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
-        classpath("com.github.triplet.gradle:play-publisher:2.8.1")
+        classpath 'com.android.tools.build:gradle:8.10.0'
     }
-}
-
-def gitVersion = { ->
-    def stdout = new ByteArrayOutputStream()
-    exec {
-        commandLine 'git', 'describe', '--tags', '--always', '--dirty'
-        standardOutput = stdout
-    }
-    return stdout.toString().trim()
 }
 
 allprojects {
-    version gitVersion()
-
     repositories {
         google()
         mavenCentral()
-        maven { url "https://jitpack.io" }
+    }
+
+    configurations.all {
+        resolutionStrategy {
+            force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+            force "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+        }
     }
 }
 
-apply from: "dependencies.gradle"
+/*subprojects {
+    tasks.withType(JavaCompile).configureEach {
+        options.compilerArgs += ["-Xlint:deprecation", "-Xlint:unchecked"]
+    }
+}*/
+
+apply from: 'dependencies.gradle'

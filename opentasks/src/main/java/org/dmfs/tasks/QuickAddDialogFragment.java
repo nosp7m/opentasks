@@ -201,7 +201,7 @@ public class QuickAddDialogFragment extends SupportDialogFragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        final Context contextThemeWrapperDark = new ContextThemeWrapper(getActivity(), R.style.Base_Theme_AppCompat);
+        final Context contextThemeWrapperDark = new ContextThemeWrapper(getActivity(), org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Default);
 
         View view = inflater.inflate(R.layout.fragment_quick_add_dialog, container);
 

@@ -81,7 +81,7 @@ public final class PostUndoAction implements TaskAction
                 PendingIntent.FLAG_CANCEL_CURRENT));
         builder.setShowWhen(false);
         builder.setGroup(GROUP_UNDO);
-        builder.setColor(new AttributeColor(new ContextThemeWrapper(context, R.style.OpenTasks_Theme_Default), R.attr.colorPrimary).argb());
+        builder.setColor(new AttributeColor(new ContextThemeWrapper(context, org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Default), org.dmfs.android.sync.opentasks_theme.R.attr.colorPrimary).argb());
 
         NotificationManagerCompat.from(context).notify("tasks.undo", id, builder.build());
     }

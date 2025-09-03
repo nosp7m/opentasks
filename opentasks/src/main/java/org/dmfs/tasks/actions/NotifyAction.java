@@ -180,7 +180,7 @@ public final class NotifyAction implements TaskAction
             builder.setDefaults(new Conditional(mRepost, context).value());
         }
         // TODO: for now we only use the primary app color, later we allow the user to select how to color notifications: default, list, priority
-        builder.setColor(new AttributeColor(new ContextThemeWrapper(context, R.style.OpenTasks_Theme_Default), R.attr.colorPrimary).argb());
+        builder.setColor(new AttributeColor(new ContextThemeWrapper(context, org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Default), org.dmfs.android.sync.opentasks_theme.R.attr.colorPrimary).argb());
         //builder.setColor(new EffectiveTaskColor(data).argb());
         NotificationManagerCompat.from(context).notify("tasks", notificationId, builder.build());
     }

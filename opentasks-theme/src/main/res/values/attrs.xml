@@ -21,4 +21,11 @@
             format="color" />
     <attr name="opentasks_progress_gradient_start_color"
             format="color" />
+
+    <attr name="colorPrimary"
+            format="color" />
+    <attr name="colorPrimaryDark"
+            format="color" />
+    <attr name="colorAccent"
+            format="color" />
 </resources>

@@ -1,11 +1,25 @@
 plugins {
     id 'java-library'
+    id 'jacoco'
 }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
 
-apply from: 'jacoco.gradle'
+configurations {
+    pom
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+check.dependsOn jacocoTestReport
 
 dependencies {
     api project(':lib-recur')

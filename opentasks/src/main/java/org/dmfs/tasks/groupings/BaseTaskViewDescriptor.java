@@ -254,15 +254,15 @@ public abstract class BaseTaskViewDescriptor implements ViewDescriptor
         {
             if (priority < 5)
             {
-                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), R.attr.colorHighPriority).argb());
+                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), org.dmfs.android.sync.opentasks_theme.R.attr.colorHighPriority).argb());
             }
             if (priority == 5)
             {
-                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), R.attr.colorMediumPriority).argb());
+                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), org.dmfs.android.sync.opentasks_theme.R.attr.colorMediumPriority).argb());
             }
             if (priority > 5)
             {
-                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), R.attr.colorLowPriority).argb());
+                prioLabel.setBackgroundColor(new AttributeColor(prioLabel.getContext(), org.dmfs.android.sync.opentasks_theme.R.attr.colorLowPriority).argb());
             }
             prioLabel.setVisibility(View.VISIBLE);
         }
@@ -284,8 +284,8 @@ public abstract class BaseTaskViewDescriptor implements ViewDescriptor
             cardView.findViewById(R.id.color_label).setAlpha(isClosed ? 0.4f : 1f);
             cardView.setCardElevation(view.getResources().getDimensionPixelSize(
                     isClosed ?
-                            R.dimen.opentasks_tasklist_card_elevation_closed :
-                            R.dimen.opentasks_tasklist_card_elevation));
+                            org.dmfs.android.sync.opentasks_theme.R.dimen.opentasks_tasklist_card_elevation_closed :
+                            org.dmfs.android.sync.opentasks_theme.R.dimen.opentasks_tasklist_card_elevation));
             ((TextView) cardView.findViewById(android.R.id.title))
                     .setTextColor(new AttributeColor(view.getContext(),
                             isClosed ?

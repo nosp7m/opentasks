@@ -2,6 +2,7 @@
 .gradle
 
 # Built application files
+bin
 build
 release
 java_pid*.addons

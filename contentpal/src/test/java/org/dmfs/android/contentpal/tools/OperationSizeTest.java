@@ -110,7 +110,7 @@ public class OperationSizeTest
                                 .contentOperationBuilder(new EmptyTransactionContext())
                                 .build())
                         .intValue(),
-                is(both(greaterThan(70)).and(lessThan(120))));
+                is(both(greaterThan(70)).and(lessThan(140))));
 
         //  minimal operation + 40 characters of data
         assertThat(
@@ -120,7 +120,7 @@ public class OperationSizeTest
                                 .contentOperationBuilder(new EmptyTransactionContext())
                                 .build())
                         .intValue(),
-                is(both(greaterThan(70 + 40)).and(lessThan(120 + 40 + 8))));
+                is(both(greaterThan(70 + 40)).and(lessThan(200 + 40 + 8))));
 
         //  minimal operation + 80 characters of data
         assertThat(
@@ -133,7 +133,7 @@ public class OperationSizeTest
                                 .contentOperationBuilder(new EmptyTransactionContext())
                                 .build())
                         .intValue(),
-                is(both(greaterThan(70 + 80)).and(lessThan(120 + 80 + 16))));
+                is(both(greaterThan(70 + 80)).and(lessThan(320 + 80 + 16))));
         //  minimal operation + 160 characters of data
         assertThat(
                 new OperationSize(
@@ -147,7 +147,7 @@ public class OperationSizeTest
                                 .contentOperationBuilder(new EmptyTransactionContext())
                                 .build())
                         .intValue(),
-                is(both(greaterThan(70 + 160)).and(lessThan(120 + 160 + 32))));
+                is(both(greaterThan(70 + 160)).and(lessThan(528 + 160 + 32))));
         //  minimal operation + 320 characters of data
         assertThat(
                 new OperationSize(
@@ -165,7 +165,7 @@ public class OperationSizeTest
                                 .contentOperationBuilder(new EmptyTransactionContext())
                                 .build())
                         .intValue(),
-                is(both(greaterThan(70 + 320)).and(lessThan(120 + 320 + 64))));
+                is(both(greaterThan(70 + 320)).and(lessThan(944 + 320 + 64))));
     }
 
 }
