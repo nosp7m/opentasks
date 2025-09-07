@@ -59,6 +59,16 @@ public class EditTaskActivity extends BaseActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_editor);
+        // Ensure the layout respects system UI elements
+        getWindow().getDecorView().setOnApplyWindowInsetsListener((v, insets) -> {
+            v.setPadding(
+                    insets.getSystemWindowInsetLeft(),
+                    insets.getSystemWindowInsetTop(),
+                    insets.getSystemWindowInsetRight(),
+                    insets.getSystemWindowInsetBottom()
+            );
+            return insets.consumeSystemWindowInsets();
+        });
 
         mAuthority = AuthorityUtil.taskAuthority(this);
 
@@ -217,5 +227,4 @@ public class EditTaskActivity extends BaseActivity
             setTitle(R.string.activity_add_task_title);
         }
     }
-
 }

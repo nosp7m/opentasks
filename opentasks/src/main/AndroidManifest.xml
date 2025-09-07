@@ -159,7 +159,7 @@
                 android:name=".homescreen.TaskListWidgetSettingsActivity"
                 android:label="@string/task_list_selection_title"
                 android:theme="@style/OpenTasks_BaseTheme.Light.Dialog"
-                android:exported="false">
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
@@ -267,7 +267,7 @@
         <activity
                 android:name=".ManageListActivity"
                 android:theme="@style/OpenTasks_Theme.Default.Dialog"
-                android:exported="false">
+                android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.INSERT" />
 
@@ -326,7 +326,7 @@
         <receiver
                 android:name=".utils.DatabaseInitializedReceiver"
                 android:enabled="@bool/opentasks_support_local_lists"
-                android:exported="false">
+                android:exported="true">
             <intent-filter>
                 <action android:name="org.dmfs.tasks.DATABASE_INITIALIZED" />
 
@@ -338,7 +338,7 @@
         </receiver>
         <receiver
                 android:name=".StaleListBroadcastReceiver"
-                android:exported="false">
+                android:exported="true">
             <intent-filter>
                 <action android:name="org.dmfs.tasks.action.STALE_LIST_BROADCAST" />
             </intent-filter>
@@ -363,7 +363,7 @@
         <receiver
                 android:name=".notification.ActionReceiver"
                 android:enabled="true"
-                android:exported="false">
+                android:exported="true">
             <intent-filter>
                 <action android:name="org.dmfs.android.tasks.TASK_DUE" />
 

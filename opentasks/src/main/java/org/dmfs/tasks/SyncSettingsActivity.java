@@ -45,6 +45,16 @@ public class SyncSettingsActivity extends BaseActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        // Ensure the layout respects system UI elements
+        getWindow().getDecorView().setOnApplyWindowInsetsListener((v, insets) -> {
+            v.setPadding(
+                insets.getSystemWindowInsetLeft(),
+                insets.getSystemWindowInsetTop(),
+                insets.getSystemWindowInsetRight(),
+                insets.getSystemWindowInsetBottom()
+            );
+            return insets.consumeSystemWindowInsets();
+        });
         // Show the Up button in the action bar.
         AppBarLayout mAppBarLayout = findViewById(R.id.appbar);
         Toolbar toolbar = findViewById(R.id.toolbar);
