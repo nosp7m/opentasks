@@ -31,6 +31,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -255,6 +256,13 @@ public class TaskListActivity extends BaseActivity implements TaskListFragment.C
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mPagerAdapter);
+        mViewPager.setOnApplyWindowInsetsListener((view, insets) -> {
+            int bottomInset = insets.getSystemWindowInsetBottom();
+            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            params.bottomMargin = bottomInset; // Set the bottom margin to the navigation bar height
+            view.setLayoutParams(params);
+            return insets;
+        });
 
         int currentPageIndex = mPagerAdapter.getPagePosition(mCurrentPageId);
 
