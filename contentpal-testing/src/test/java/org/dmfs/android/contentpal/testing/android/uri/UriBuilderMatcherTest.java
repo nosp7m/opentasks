@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal.testing.android.uri;
@@ -45,7 +47,7 @@ public class UriBuilderMatcherTest
     {
         assertThat(builds(hasParam("p", "1")), matches(new Uri.Builder().scheme("https").authority("example.com").appendQueryParameter("p", "1")));
         assertThat(builds(hasParam("p", "1")),
-                mismatches(new Uri.Builder().scheme("https").authority("example.com").appendQueryParameter("p", "2"), "built Uri parameter \"p\" was \"2\""));
+            mismatches(new Uri.Builder().scheme("https").authority("example.com").appendQueryParameter("p", "2"), "built Uri parameter \"p\" was \"2\""));
         assertThat(builds(hasParam("p", "1")), describesAs("builds a Uri with parameter \"p\" is \"1\""));
     }
 

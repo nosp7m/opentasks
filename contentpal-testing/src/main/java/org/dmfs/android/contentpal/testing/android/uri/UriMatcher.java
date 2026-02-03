@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal.testing.android.uri;
@@ -42,9 +44,9 @@ public final class UriMatcher
     public static Matcher<Uri> hasParamSet(@NonNull Matcher<Iterable<? extends Pair<String, String>>> paramNamesMatcher)
     {
         return having(
-                "parameters",
-                uri -> new Mapped<>(name -> new ValuePair<>(name, uri.getQueryParameter(name)), uri.getQueryParameterNames()),
-                paramNamesMatcher);
+            "parameters",
+            uri -> new Mapped<>(name -> new ValuePair<>(name, uri.getQueryParameter(name)), uri.getQueryParameterNames()),
+            paramNamesMatcher);
     }
 
 

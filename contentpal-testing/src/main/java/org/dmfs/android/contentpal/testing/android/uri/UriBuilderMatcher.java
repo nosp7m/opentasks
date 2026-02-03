@@ -41,7 +41,7 @@ public final class UriBuilderMatcher extends TypeSafeDiagnosingMatcher<Uri.Build
      * Verifies that a {@link Uri.Builder} builds a {@link Uri} matching certain criteria.
      *
      * @param delegate
-     *         The {@link Matcher} to delegate to when testing the result of the builder.
+     *     The {@link Matcher} to delegate to when testing the result of the builder.
      *
      * @return A {@link Matcher} for {@link Uri.Builder}s.
      */

@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal.testing.contentoperationbuilder;
@@ -82,7 +84,7 @@ public final class WithExpectedCount extends TypeSafeDiagnosingMatcher<ContentPr
         Optional<Integer> expectedCount = new NullSafe<>(new Field<Integer>(builder, "mExpectedCount").value());
 
         if (!mExpectedCount.isPresent() && expectedCount.isPresent()
-                || mExpectedCount.isPresent() && expectedCount.isPresent() && !mExpectedCount.value().equals(expectedCount.value()))
+            || mExpectedCount.isPresent() && expectedCount.isPresent() && !mExpectedCount.value().equals(expectedCount.value()))
         {
             mismatchDescription.appendText(String.format(Locale.ENGLISH, "expected %d results", expectedCount.value()));
             return false;
@@ -100,7 +102,7 @@ public final class WithExpectedCount extends TypeSafeDiagnosingMatcher<ContentPr
     public void describeTo(@NonNull Description description)
     {
         description.appendText(mExpectedCount.isPresent()
-                ? String.format(Locale.ENGLISH, "expects %d results", mExpectedCount.value())
-                : "expects no specific number of results");
+            ? String.format(Locale.ENGLISH, "expects %d results", mExpectedCount.value())
+            : "expects no specific number of results");
     }
 }

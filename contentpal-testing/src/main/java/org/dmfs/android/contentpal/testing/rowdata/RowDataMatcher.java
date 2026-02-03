@@ -53,7 +53,7 @@ public final class RowDataMatcher extends TypeSafeDiagnosingMatcher<RowData<?>>
     {
         // note RowData is not allowed to change anything but values, hence we add a few more matchers here
         return new RowDataMatcher(new BounceTransactionContext(),
-                allOf(allOf(builderMatchers), updateOperation(), withYieldNotAllowed(), withoutExpectedCount()));
+            allOf(allOf(builderMatchers), updateOperation(), withYieldNotAllowed(), withoutExpectedCount()));
     }
 
 

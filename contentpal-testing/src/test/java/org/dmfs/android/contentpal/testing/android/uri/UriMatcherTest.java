@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal.testing.android.uri;
@@ -53,49 +55,49 @@ public class UriMatcherTest
     public void test()
     {
         assertThat(absolute(),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com")),
-                        matches(Uri.parse("mailto:mail@example.com")),
-                        mismatches(Uri.parse("non/absolute"), "absolute was <false>"),
-                        describesAs("absolute is <true>")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com")),
+                matches(Uri.parse("mailto:mail@example.com")),
+                mismatches(Uri.parse("non/absolute"), "absolute was <false>"),
+                describesAs("absolute is <true>")));
 
         assertThat(hierarchical(),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com")),
-                        matches(Uri.parse("non/absolute")),
-                        mismatches(Uri.parse("mailto:mail@example.com"), "hierarchical was <false>"),
-                        describesAs("hierarchical is <true>")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com")),
+                matches(Uri.parse("non/absolute")),
+                mismatches(Uri.parse("mailto:mail@example.com"), "hierarchical was <false>"),
+                describesAs("hierarchical is <true>")));
 
         assertThat(encodedPath("/abc/def%20123"),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/abc/def%20123")),
-                        matches(Uri.parse("/abc/def%20123")),
-                        mismatches(Uri.parse("https://example.com/abc/def%21123"), "path was \"/abc/def%21123\""),
-                        describesAs("path is \"/abc/def%20123\"")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/abc/def%20123")),
+                matches(Uri.parse("/abc/def%20123")),
+                mismatches(Uri.parse("https://example.com/abc/def%21123"), "path was \"/abc/def%21123\""),
+                describesAs("path is \"/abc/def%20123\"")));
 
         assertThat(hasParam("param", "value"),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?param=value")),
-                        mismatches(Uri.parse("https://example.com/"), "parameter \"param\" was null"),
-                        mismatches(Uri.parse("https://example.com/?param=value1"), "parameter \"param\" was \"value1\""),
-                        describesAs("parameter \"param\" is \"value\"")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?param=value")),
+                mismatches(Uri.parse("https://example.com/"), "parameter \"param\" was null"),
+                mismatches(Uri.parse("https://example.com/?param=value1"), "parameter \"param\" was \"value1\""),
+                describesAs("parameter \"param\" is \"value\"")));
 
         assertThat(hasParam("param", is("value")),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?param=value")),
-                        mismatches(Uri.parse("https://example.com/"), "parameter \"param\" was null"),
-                        mismatches(Uri.parse("https://example.com/?param=value1"), "parameter \"param\" was \"value1\""),
-                        describesAs("parameter \"param\" is \"value\"")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?param=value")),
+                mismatches(Uri.parse("https://example.com/"), "parameter \"param\" was null"),
+                mismatches(Uri.parse("https://example.com/?param=value1"), "parameter \"param\" was \"value1\""),
+                describesAs("parameter \"param\" is \"value\"")));
 
         assertThat(hasParamSet(is(emptyIterable())),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/")),
-                        mismatches(Uri.parse("https://example.com/?param"), startsWith("parameters ")),
-                        mismatches(Uri.parse("https://example.com/?param=value1"), startsWith("parameters ")),
-                        describesAs("parameters is an empty iterable")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/")),
+                mismatches(Uri.parse("https://example.com/?param"), startsWith("parameters ")),
+                mismatches(Uri.parse("https://example.com/?param=value1"), startsWith("parameters ")),
+                describesAs("parameters is an empty iterable")));
 
         assertThat(hasParamSet(containsInAnyOrder(pair("a", "1"), pair("b", "2"))),
-                Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?a=1&b=2")),
-                        matches(Uri.parse("https://example.com/?b=2&a=1")),
-                        mismatches(Uri.parse("https://example.com/?a=1"), startsWith("parameters ")),
-                        mismatches(Uri.parse("https://example.com/?a=1&b=2&c=3"), startsWith("parameters ")),
-                        mismatches(Uri.parse("https://example.com/?a=1&b=3"), startsWith("parameters ")),
-                        describesAs(
-                                "parameters iterable over [is Pair with left value: \"a\" , and right value: \"1\", is Pair with left value: \"b\" , and right value: \"2\"] in any order")));
+            Matchers.<org.hamcrest.Matcher<Uri>>allOf(matches(Uri.parse("https://example.com/?a=1&b=2")),
+                matches(Uri.parse("https://example.com/?b=2&a=1")),
+                mismatches(Uri.parse("https://example.com/?a=1"), startsWith("parameters ")),
+                mismatches(Uri.parse("https://example.com/?a=1&b=2&c=3"), startsWith("parameters ")),
+                mismatches(Uri.parse("https://example.com/?a=1&b=3"), startsWith("parameters ")),
+                describesAs(
+                    "parameters iterable over [is Pair with left value: \"a\" , and right value: \"1\", is Pair with left value: \"b\" , and right value: \"2\"] in any order")));
 
     }
 
