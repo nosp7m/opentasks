@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.xmlmagic;
