@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -34,7 +36,7 @@ public interface OperationsQueue
      * in which case the transaction is committed before adding the new {@link Operation}s to a new transaction.
      *
      * @param operationsBatch
-     *         The {@link Iterable} of {@link Operation}s to enqueue for execution.
+     *     The {@link Iterable} of {@link Operation}s to enqueue for execution.
      *
      * @throws RemoteException
      * @throws OperationApplicationException

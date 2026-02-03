@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -40,7 +42,7 @@ public interface Transaction
      * Note, calling this again will try to execute exactly the same transaction once more.
      *
      * @param client
-     *         A {@link ContentProviderClient} to execute the transaction on.
+     *     A {@link ContentProviderClient} to execute the transaction on.
      *
      * @return A new {@link TransactionContext} that should be used for any subsequent transaction that might have rows referring to the ones created in this
      * transaction.
@@ -57,7 +59,7 @@ public interface Transaction
      * Transaction}s.
      *
      * @param batch
-     *         An {@link Iterable} of {@link Operation}s to include into this transaction.
+     *     An {@link Iterable} of {@link Operation}s to include into this transaction.
      *
      * @return A new {@link Transaction} that also includes the given {@link Operation}s.
      */

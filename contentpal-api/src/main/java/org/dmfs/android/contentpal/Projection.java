@@ -23,7 +23,7 @@ import androidx.annotation.NonNull;
  * A column projection for content provider queries.
  *
  * @param <T>
- *         The contract of the view this projection belongs to.
+ *     The contract of the view this projection belongs to.
  *
  * @author Marten Gajda
  */

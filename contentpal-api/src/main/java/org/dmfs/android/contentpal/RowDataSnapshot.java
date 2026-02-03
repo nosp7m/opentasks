@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -29,7 +31,7 @@ import androidx.annotation.NonNull;
  * contain a value, both methods will return an absent {@link Optional}.
  *
  * @param <Contract>
- *         The contract of the view the data of this snapshot belongs to.
+ *     The contract of the view the data of this snapshot belongs to.
  *
  * @author Marten Gajda
  */

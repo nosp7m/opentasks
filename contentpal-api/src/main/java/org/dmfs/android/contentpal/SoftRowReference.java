@@ -21,7 +21,7 @@ package org.dmfs.android.contentpal;
  * provider row (yet).
  *
  * @param <T>
- *         The contract of the {@link Table} of the {@link RowSnapshot} this reference refers to.
+ *     The contract of the {@link Table} of the {@link RowSnapshot} this reference refers to.
  *
  * @author Marten Gajda
  */

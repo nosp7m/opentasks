@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -27,7 +29,7 @@ import androidx.annotation.NonNull;
  * A single operation on a content provider table.
  *
  * @param <T>
- *         The contract of the table this {@link Operation} belongs to.
+ *     The contract of the table this {@link Operation} belongs to.
  *
  * @author Marten Gajda
  */
@@ -47,12 +49,12 @@ public interface Operation<T>
      * Creates a {@link ContentProviderOperation.Builder} for this {@link Operation}.
      *
      * @param transactionContext
-     *         The current {@link TransactionContext}.
+     *     The current {@link TransactionContext}.
      *
      * @return A {@link ContentProviderOperation.Builder} that builds the {@link ContentProviderOperation} on {@link ContentProviderOperation.Builder#build()}.
      *
      * @throws UnsupportedOperationException
-     *         If this is a NoOp.
+     *     If this is a NoOp.
      */
     @NonNull
     ContentProviderOperation.Builder contentOperationBuilder(@NonNull TransactionContext transactionContext) throws UnsupportedOperationException;

@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -30,7 +32,7 @@ import androidx.annotation.NonNull;
  * Represents a view on a content provider table.
  *
  * @param <T>
- *         The contract of this view.
+ *     The contract of this view.
  *
  * @author Marten Gajda
  */
@@ -42,18 +44,22 @@ public interface View<T>
      * Note, in most cases you don't want to call this directly, but create dedicated {@link RowSet} instance.
      *
      * @param uriParams
-     *         Additional {@link Uri} parameters to append to the query {@link Uri}.
+     *     Additional {@link Uri} parameters to append to the query {@link Uri}.
      * @param projection
-     *         The projection to request from the cursor.
+     *     The projection to request from the cursor.
      * @param predicate
-     *         The {@link Predicate} to use as the selection.
+     *     The {@link Predicate} to use as the selection.
      * @param sorting
-     *         An {@link Optional} sorting column name.
+     *     An {@link Optional} sorting column name.
      *
      * @return A {@link Cursor} as returned by the {@link ContentProvider}.
      */
     @NonNull
-    Cursor rows(@NonNull UriParams uriParams, @NonNull Projection<? super T> projection, @NonNull Predicate<? super T> predicate, @NonNull Optional<String> sorting) throws RemoteException;
+    Cursor rows(
+        @NonNull UriParams uriParams,
+        @NonNull Projection<? super T> projection,
+        @NonNull Predicate<? super T> predicate,
+        @NonNull Optional<String> sorting) throws RemoteException;
 
     /**
      * Returns a {@link Table} to write to.

@@ -25,7 +25,7 @@ import androidx.annotation.NonNull;
  * The data to be used in a content provider operation.
  *
  * @param <T>
- *         The contract of the table this {@link RowData} belongs to.
+ *     The contract of the table this {@link RowData} belongs to.
  *
  * @author Marten Gajda
  */
@@ -39,9 +39,9 @@ public interface RowData<T>
      * sure you don't rely on the old state of the builder and don't use it in concurrent threads.
      *
      * @param transactionContext
-     *         The {@link TransactionContext} of the {@link Transaction} this is being executed in.
+     *     The {@link TransactionContext} of the {@link Transaction} this is being executed in.
      * @param builder
-     *         A {@link ContentProviderOperation.Builder}.
+     *     A {@link ContentProviderOperation.Builder}.
      *
      * @return The same {@link ContentProviderOperation.Builder}.
      */

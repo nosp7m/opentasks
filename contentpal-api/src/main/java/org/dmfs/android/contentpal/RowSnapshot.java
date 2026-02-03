@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -24,7 +26,7 @@ import androidx.annotation.NonNull;
  * underlying row is updated.
  *
  * @param <T>
- *         The contract of the view this {@link RowSnapshot} belongs to.
+ *     The contract of the view this {@link RowSnapshot} belongs to.
  *
  * @author Marten Gajda
  */

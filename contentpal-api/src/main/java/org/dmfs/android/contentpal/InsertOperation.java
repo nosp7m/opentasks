@@ -20,7 +20,7 @@ package org.dmfs.android.contentpal;
  * A special {@link Operation} which inserts a new row. This type exists to ensure certain operations can only be applied to inserts.
  *
  * @param <T>
- *         The contract of the table this {@link InsertOperation} belongs to.
+ *     The contract of the table this {@link InsertOperation} belongs to.
  *
  * @author Marten Gajda
  */

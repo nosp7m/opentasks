@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.android.contentpal;
@@ -25,7 +27,7 @@ import androidx.annotation.NonNull;
  * A predicate.
  *
  * @param <Contract>
- *         The contract of the table this predicate belongs to.
+ *     The contract of the table this predicate belongs to.
  *
  * @author Marten Gajda
  */
@@ -57,7 +59,7 @@ public interface Predicate<Contract>
      * Returns an SQL selection CharSequence which selects elements matching this predicate.
      *
      * @param transactionContext
-     *         The {@link TransactionContext} of the Transaction this is executed in.
+     *     The {@link TransactionContext} of the Transaction this is executed in.
      *
      * @return
      */
@@ -68,7 +70,7 @@ public interface Predicate<Contract>
      * An {@link Iterable} of all arguments of this predicate.
      *
      * @param transactionContext
-     *         The {@link TransactionContext} of the Transaction this is executed in.
+     *     The {@link TransactionContext} of the Transaction this is executed in.
      */
     @NonNull
     Iterable<Argument> arguments(@NonNull TransactionContext transactionContext);

@@ -32,9 +32,9 @@ public interface TransactionContext
      * {@link Transaction} only.
      *
      * @param <T>
-     *         The contract of the referenced table.
+     *     The contract of the referenced table.
      * @param reference
-     *         The {@link SoftRowReference} to resolve.
+     *     The {@link SoftRowReference} to resolve.
      *
      * @return A resolve {@link RowReference} or the same {@link SoftRowReference}.
      */
