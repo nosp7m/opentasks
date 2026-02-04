@@ -25,7 +25,7 @@ android {
 dependencies {
     api deps.support_annotations
     api project(':jems')
-    api project(':opentasks-theme')
+    api project(':tasksandlists-theme')
 
     implementation deps.support_appcompat
 

@@ -22,7 +22,7 @@ android {
 
 dependencies {
     api deps.support_annotations
-    api project(':opentasks-contract')
+    api project(':tasksandlists-contract')
     api project(':contentpal')
     api project(':rfc5545-datetime')
     api project(':lib-recur')

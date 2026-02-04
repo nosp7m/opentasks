@@ -28,5 +28,5 @@ dependencies {
     implementation project(':retention-magic')
     implementation project(':jems')
     implementation project(':drawablepagertitlestrip')
-    implementation project(':opentasks-theme')
+    implementation project(':tasksandlists-theme')
 }
