@@ -1,3 +1,5 @@
+// This file has been changed from the original.
+
 include ':jems', ':jems-testing'
 include ':rfc5545-datetime'
 include ':lib-recur', ':lib-recur-hamcrest'

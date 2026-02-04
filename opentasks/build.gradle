@@ -24,20 +24,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
+    if (System.getenv('RELEASE_KEYSTORE') != null) {
         signingConfigs {
             release {
-                storeFile file(System.getenv('DMFS_RELEASE_KEYSTORE'))
-                storePassword System.getenv('DMFS_RELEASE_KEYSTORE_PASSWORD')
-                keyAlias System.getenv('DMFS_RELEASE_KEY_ALIAS')
-                keyPassword System.getenv('DMFS_RELEASE_KEY_PASSWORD')
+                storeFile file(System.getenv('RELEASE_KEYSTORE'))
+                storePassword System.getenv('RELEASE_KEYSTORE_PASSWORD')
+                keyAlias System.getenv('RELEASE_KEY_ALIAS')
+                keyPassword System.getenv('RELEASE_KEY_PASSWORD')
             }
         }
     }
 
     buildTypes {
         release {
-            if (System.getenv('DMFS_RELEASE_KEYSTORE') != null) {
+            if (System.getenv('RELEASE_KEYSTORE') != null) {
                 signingConfig = signingConfigs.release
             }
             minifyEnabled false
