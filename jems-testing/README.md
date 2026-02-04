@@ -1,7 +1,3 @@
-[![Build](https://github.com/dmfs/jems/actions/workflows/main.yml/badge.svg?label=main)](https://github.com/dmfs/jems/actions/workflows/main.yml)  
-[![codecov](https://codecov.io/gh/dmfs/jems/branch/master/graph/badge.svg)](https://codecov.io/gh/dmfs/jems)  
-[![Confidence](https://img.shields.io/badge/Tested_with-Confidence-800000?labelColor=white)](https://saynotobugs.org/confidence)
-
 # Jems
 
 __Java gems, a collection of Java utilities.__
@@ -24,3 +20,4 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
+This file has been changed from the original.
