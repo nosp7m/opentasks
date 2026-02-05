@@ -16,7 +16,7 @@
   -->
 
 <resources>
-    <string name="app_name">OpenTasks</string>
+    <string name="app_name">Tasks &amp; Lists</string>
     <string name="menu_add_task_condensed">Lägg till</string>
     <string name="toast_task_created">%1s skapad.</string>
     <string name="toast_x_removed">%1s borttagen.</string>

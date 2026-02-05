@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Manifest stuff -->
-    <string name="app_name">OpenTasks</string>
+    <string name="app_name">Tasks &amp; Lists</string>
 
     <!-- Task list -->
     <string name="menu_add_task">Додај задатак</string>
