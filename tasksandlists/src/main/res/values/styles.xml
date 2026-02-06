@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file has been changed from the original. -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- DOWN from here: former v14 styles.xml content -->
 
     <style name="OpenTasksAppBaseTheme"
-            parent="@style/Theme.AppCompat.Light.DarkActionBar">
+            parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:windowContentOverlay">@null</item>
         <item name="searchViewStyle">@style/WhiteSearchViewStyle</item>
         <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
@@ -13,7 +15,7 @@
     </style>
 
     <style name="AppBaseTheme"
-            parent="@style/Theme.AppCompat.Light.DarkActionBar">
+            parent="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <item name="actionBarStyle">@style/ActionBar</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:actionBarWidgetTheme">@style/actionBarWidgetTheme</item>
@@ -220,6 +222,8 @@
         <item name="android:textColor">#FF333333</item>
         <item name="colorPrimary">@color/primary</item>
         <item name="android:windowTitleStyle">@style/window_title_style</item>
+        <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListViewStyle</item>
     </style>
 
     <style name="AppThemeDialog"
@@ -359,6 +363,15 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="elevation">0dp</item>
+    </style>
+
+    <!-- Popup and dropdown styles for light mode -->
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
+    </style>
+
+    <style name="DropDownListViewStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <item name="android:background">@android:color/white</item>
     </style>
 
 </resources>

@@ -8,6 +8,7 @@ Changes:
 - Updated certain parts of dependency code with newer versions from Maven repositories and made changed to make the code compile/build.
 - Update of SDK, dependency, and build tool versions.
 - Changed the name and logo of the application.
+- Finished dark mode implementation.
 
 Tasks & Lists - Open Source Task App for Android
 Copyright 2026 nosp7m

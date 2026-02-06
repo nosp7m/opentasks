@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This file has been changed from the original. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,6 +12,6 @@
             android:ellipsize="end"
             android:singleLine="true"
             android:textAppearance="@android:style/TextAppearance.Medium"
-            android:textColor="#c0ffffff"/>
+            android:textColor="@color/list_spinner_quick_add_text_color"/>
 
 </LinearLayout>

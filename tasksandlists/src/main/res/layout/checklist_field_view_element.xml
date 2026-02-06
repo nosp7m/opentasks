@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This file has been changed from the original. -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/checklist_element"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#e0ffffff">
+        android:background="@color/checklist_element_background">
 
     <CheckBox
             android:id="@android:id/checkbox"
@@ -30,7 +31,7 @@
             android:layout_toLeftOf="@id/drag_handle"
             android:layout_toEndOf="@android:id/checkbox"
             android:layout_toRightOf="@android:id/checkbox"
-            android:background="@android:color/white"
+            android:background="@color/checklist_item_background"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="@string/opentasks_checklist_empty_item_hint"

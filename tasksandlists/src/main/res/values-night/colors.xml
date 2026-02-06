@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This file has been changed from the original. -->
+<!-- Dark mode color overrides -->
+<resources>
+
+    <!-- Lighter/darker variants inverted for dark mode -->
+    <color name="lighter_gray">#FF222222</color>
+    <color name="light_gray">#FF333333</color>
+    <color name="dark_gray">#FFB0B0B0</color>
+    <color name="darker_gray">#FFE0E0E0</color>
+    
+    <color name="translucent_black">#CC222222</color>
+    <color name="translucent_white">#33FFFFFF</color>
+    <color name="translucent_grey">#BB444444</color>
+    
+    <!-- Highlight colors for dark mode -->
+    <color name="list_background_pressed">#22FFFFFF</color>
+    <color name="list_background_activated">#44FFFFFF</color>
+
+    <!-- Maintain Holo colors as they work in both modes -->
+    <color name="holo_blue">#CC33B5E5</color>
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_green_dark">#ff669900</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="material_red">#f44336</color>
+    <color name="material_deep_teal_500">#009688</color>
+
+    <color name="dark_primary">#FF009688</color>
+    <color name="dark_primary_dark">#FF00796B</color>
+    <color name="dark_accent">#FFFF5722</color>
+
+    <!-- Additional colors for dark mode theming -->
+    <color name="checklist_element_background">#e0202020</color>
+    <color name="description_actions_background">#ff202020</color>
+    <color name="task_view_detail_text_primary">#ffffffff</color>
+    <color name="task_view_detail_text_secondary">#a0ffffff</color>
+    <color name="list_spinner_text_color">#a0ffffff</color>
+    <color name="list_spinner_quick_add_text_color">#c0ffffff</color>
+    <color name="visible_task_list_text_color">#c0ffffff</color>
+    <color name="time_field_text_color">#ffb0b0b0</color>
+
+    <!-- Checklist and dropdown backgrounds for dark mode -->
+    <color name="checklist_item_background">#ff202020</color>
+    <color name="dropdown_background">#ff2a2a2a</color>
+
+</resources>

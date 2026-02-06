@@ -41,5 +41,19 @@
     <color name="dark_primary_dark">#FF00796B</color>
     <color name="dark_accent">#FFFF5722</color>
 
+    <!-- Additional colors for theming -->
+    <color name="checklist_element_background">#e0ffffff</color>
+    <color name="description_actions_background">#ffffffff</color>
+    <color name="task_view_detail_text_primary">#ffffffff</color>
+    <color name="task_view_detail_text_secondary">#a0ffffff</color>
+    <color name="list_spinner_text_color">#a0ffffff</color>
+    <color name="list_spinner_quick_add_text_color">#c0ffffff</color>
+    <color name="visible_task_list_text_color">#c0000000</color>
+    <color name="time_field_text_color">#ff808080</color>
+    
+    <!-- Checklist and dropdown backgrounds -->
+    <color name="checklist_item_background">#ffffffff</color>
+    <color name="dropdown_background">#ffffffff</color>
+
 
 </resources>
