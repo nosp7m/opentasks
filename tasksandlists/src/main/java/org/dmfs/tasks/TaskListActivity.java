@@ -263,7 +263,23 @@ public class TaskListActivity extends BaseActivity implements TaskListFragment.C
             ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
             params.bottomMargin = bottomInset; // Set the bottom margin to the navigation bar height
             view.setLayoutParams(params);
-            return insets;
+            
+            // Also apply bottom inset to FloatingActionButton if it exists
+            if (mFloatingActionButton != null) {
+                ViewGroup.MarginLayoutParams fabParams = (ViewGroup.MarginLayoutParams) mFloatingActionButton.getLayoutParams();
+                // Preserve the original margin (16dp from XML) and add the bottom inset
+                int originalMargin = (int) (16 * getResources().getDisplayMetrics().density);
+                fabParams.bottomMargin = bottomInset + originalMargin;
+                mFloatingActionButton.setLayoutParams(fabParams);
+            }
+            
+            // Consume the bottom inset so it doesn't get applied again to children
+            return insets.replaceSystemWindowInsets(
+                insets.getSystemWindowInsetLeft(),
+                insets.getSystemWindowInsetTop(),
+                insets.getSystemWindowInsetRight(),
+                0
+            );
         });
 
         int currentPageIndex = mPagerAdapter.getPagePosition(mCurrentPageId);
