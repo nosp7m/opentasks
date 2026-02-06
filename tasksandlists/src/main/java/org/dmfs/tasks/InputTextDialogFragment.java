@@ -150,10 +150,7 @@ public class InputTextDialogFragment extends SupportDialogFragment implements On
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
 
-        final Context contextThemeWrapperLight = new ContextThemeWrapper(getActivity(), org.dmfs.android.sync.opentasks_theme.R.style.OpenTasks_Theme_Default);
-        LayoutInflater localInflater = inflater.cloneInContext(contextThemeWrapperLight);
-
-        View view = localInflater.inflate(R.layout.fragment_input_text_dialog, container);
+        View view = inflater.inflate(R.layout.fragment_input_text_dialog, container);
 
         mEditText = (EditText) view.findViewById(android.R.id.input);
         mErrorText = (TextView) view.findViewById(R.id.error);

@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This file has been changed from the original. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:background="@color/background_material_light"
+        android:background="?android:attr/windowBackground"
         android:padding="8dp">
 
     <TextView
             android:id="@android:id/title"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="start|left|center_vertical"
             android:padding="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="?android:attr/textColorPrimary"
             android:text=""/>
 
     <TextView
             android:id="@android:id/message"
-            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:textColor="?android:attr/textColorPrimary"
             android:visibility="gone"/>
 
     <EditText
             android:id="@android:id/input"
-            style="@style/Widget.AppCompat.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -37,15 +39,17 @@
             android:imeOptions="actionDone"
             android:inputType="textCapSentences"
             android:minWidth="240dp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textColorHint="?android:attr/textColorSecondary"
             android:textCursorDrawable="@null"/>
 
     <TextView
             android:id="@+id/error"
-            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:textAppearance="?attr/textAppearanceBody1"
             android:textColor="@color/material_red_700"
             android:visibility="invisible"/>
 
@@ -58,20 +62,18 @@
 
         <TextView
                 android:id="@android:id/button2"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@android:string/cancel"
-                android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                android:textColor="?android:textColorSecondary"/>
+                android:textColor="?android:attr/textColorSecondary"/>
 
         <TextView
                 android:id="@android:id/button1"
-                style="@style/Widget.AppCompat.Button.Borderless"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@android:string/ok"
-                android:textAppearance="@style/TextAppearance.AppCompat.Button"
                 android:textColor="?attr/colorPrimary"/>
     </LinearLayout>
 
