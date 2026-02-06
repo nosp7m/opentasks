@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Override OpenTasksAppTheme to enable light status bar for API 23+ -->
+    <style name="OpenTasksAppTheme"
+            parent="OpenTasksAppBaseTheme">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/material_deep_orange_500</item>
+        <item name="android:windowTitleStyle">@style/window_title_style</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Enable light status bar (dark icons on light background) -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Override DetailsTheme to enable light status bar for API 23+ -->
+    <style name="DetailsTheme"
+            parent="AppTheme">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:actionBarStyle">@style/DetailsActionBar</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- Enable light status bar (dark icons on light background) -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Override AppTheme to enable light status bar for API 23+ -->
+    <style name="AppTheme"
+            parent="AppBaseTheme">
+        <item name="android:textColor">#FF333333</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="android:windowTitleStyle">@style/window_title_style</item>
+        <!-- Enable light status bar (dark icons on light background) -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+</resources>

@@ -12,7 +12,10 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
+
 package org.dmfs.tasks;
 
 import android.annotation.SuppressLint;
@@ -31,8 +34,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -643,9 +644,13 @@ public class EditTaskFragment extends SupportFragment implements LoaderManager.L
         actionBar.setDisplayShowTitleEnabled(false);
         actionBar.setDisplayShowTitleEnabled(true);
 
-        Window window = getActivity().getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(new Mixed(newColor, mListColor).argb());
+        // Note: We don't modify the status bar color here.
+        // The theme already properly configures the status bar (color and icon brightness)
+        // via windowLightStatusBar and statusBarColor attributes.
+        // Overriding it with dynamic task colors can cause visibility issues.
+        //Window window = getActivity().getWindow();
+        //window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //window.setStatusBarColor(new Mixed(newColor, mListColor).argb());
 
         mTaskListBar.setBackgroundColor(mListColor);
         if (mColorBar != null)

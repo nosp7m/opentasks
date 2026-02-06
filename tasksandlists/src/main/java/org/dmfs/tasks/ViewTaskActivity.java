@@ -12,6 +12,8 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
+ * This file has been changed from the original.
  */
 
 package org.dmfs.tasks;
@@ -21,8 +23,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
-import android.view.Window;
-import android.view.WindowManager;
 
 import org.dmfs.android.bolts.color.Color;
 import org.dmfs.android.bolts.color.colors.PrimaryColor;
@@ -154,9 +154,13 @@ public class ViewTaskActivity extends BaseActivity implements ViewTaskFragment.C
     @Override
     public void onListColorLoaded(@NonNull Color color)
     {
-        Window window = getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(new DarkenedForStatusBar(color).argb());
+        // Note: We don't modify the status bar color here.
+        // The theme already properly configures the status bar (color and icon brightness)
+        // via windowLightStatusBar and statusBarColor attributes.
+        // Overriding it with dynamic task colors can cause visibility issues.
+        //Window window = getWindow();
+        //window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        //window.setStatusBarColor(new DarkenedForStatusBar(color).argb());
     }
 
 }
