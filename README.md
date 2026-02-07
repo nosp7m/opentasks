@@ -1,9 +1,12 @@
 # Tasks & Lists
 
-An open source task app for Android forked from OpenTasks (<https://github.com/dmfs/opentasks>).
+<p align="center">
+  <img src="tasksandlists/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="Tasks & Lists" width="200" height="200"><br/><br/>
+  An open source task app for Android, forked from OpenTasks (<a href="https://github.com/dmfs/opentasks/" target="_blank">https://github.com/dmfs/opentasks/</a>).
+</p>
 
+# Disclaimer
 > [!important]
-> Disclaimer:
 >
 > This repository and the application "Tasks & Lists" are a fork of OpenTasks (Copyright (c) Marten Gajda 2013-2015, licensed under Apache2). The fork was created, because development of OpenTasks has been stopped and the original app may stop working on newer Android versions.
 >
@@ -11,7 +14,13 @@ An open source task app for Android forked from OpenTasks (<https://github.com/d
 >
 > The intention of the Tasks & Lists app is to be a drop-in replacement for OpenTasks. It was renamed and the logo was changed to fulfill license and copyright requirements. The original application id 'org.dmfs.tasks' was kept as is, to preserve the synchronization possibility with DAVx5. The downside of this approach is, that the original app, OpenTasks, and this app, Tasks & Lists, cannot be installed in parallel on the same device. Again, this is NOT to deceive users, but to preserve the synchronization possibility with DAVx5. If in doubt, use the original app only.
 
+# Features, Changes & Updates
+
+New features and changes are listed in the [NOTICE](NOTICE) file.
+
 There are no road maps, active development, or new features planned. Just Android SDK, Gradle, and dependency updates to allow execution on current Android devices.
+
+Pull requests with bug fixes are welcome and reviewed when time allows it. There are no SLAs, ETAs, etc.
 
 ## Build
 
@@ -20,7 +29,7 @@ This section describes how the .apk file of the app can be built.
 ### Prerequisites
 
 * Java >= 21.0.9
-* Gradle >= 8.14.1
+* Gradle >= 9.3.1
 * Android SDK 36
 * Signing keys
 

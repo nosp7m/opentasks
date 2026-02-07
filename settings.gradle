@@ -1,5 +1,21 @@
 // This file has been changed from the original.
 
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 include ':jems', ':jems-testing'
 include ':rfc5545-datetime'
 include ':lib-recur', ':lib-recur-hamcrest'

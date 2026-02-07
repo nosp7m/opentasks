@@ -8,16 +8,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.10.0'
+        classpath 'com.android.tools.build:gradle:8.13.2'
     }
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-
+subprojects {
     configurations.all {
         resolutionStrategy {
             force "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

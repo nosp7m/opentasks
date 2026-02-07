@@ -1,13 +1,15 @@
+// This file has been changed from the original.
+
 plugins {
     id 'com.android.library'
 }
 
 android {
-    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+    compileSdk = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion = MIN_SDK_VERSION.toInteger()
-        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+        minSdk = MIN_SDK_VERSION.toInteger()
+        targetSdk = TARGET_SDK_VERSION.toInteger()
     }
 
     compileOptions {
@@ -17,7 +19,7 @@ android {
 
     namespace = 'org.dmfs.android.view'
 
-    lintOptions {
+    lint {
         abortOnError = false
     }
 }

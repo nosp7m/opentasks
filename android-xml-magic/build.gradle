@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+    compileSdk = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion = MIN_SDK_VERSION.toInteger()
-        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+        minSdk = MIN_SDK_VERSION.toInteger()
+        targetSdk = TARGET_SDK_VERSION.toInteger()
     }
 
     compileOptions {
@@ -19,7 +19,7 @@ android {
 
     namespace = 'org.dmfs.android.xmlmagic'
 
-    lintOptions {
+    lint {
         abortOnError = false
     }
 }

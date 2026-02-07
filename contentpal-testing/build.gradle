@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdkVersion = COMPILE_SDK_VERSION.toInteger()
+    compileSdk = COMPILE_SDK_VERSION.toInteger()
 
     defaultConfig {
-        minSdkVersion = MIN_SDK_VERSION.toInteger()
-        targetSdkVersion = TARGET_SDK_VERSION.toInteger()
+        minSdk = MIN_SDK_VERSION.toInteger()
+        targetSdk = TARGET_SDK_VERSION.toInteger()
 
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
     }
@@ -21,11 +21,9 @@ android {
 
     namespace = 'org.dmfs.android.contentpal.testing'
 
-    android {
-        lintOptions {
-            // lint complains about some of the dependencies because it doesn't know this is a test lib and not meant to run under Android
-            disable 'InvalidPackage'
-        }
+    lint {
+        // lint complains about some of the dependencies because it doesn't know this is a test lib and not meant to run under Android
+        disable 'InvalidPackage'
     }
 }
 
